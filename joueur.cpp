@@ -30,3 +30,11 @@ void Joueur::setEnPrison(int tourEnPrison){
 int Joueur::getEnPrison(){
     return enPrison;
 }
+
+void Joueur::setCarteSortir(int newCarteSortir){
+    carteSortir = newCarteSortir;
+}
+
+int Joueur::getCarteSortir(){
+    return carteSortir;
+}
