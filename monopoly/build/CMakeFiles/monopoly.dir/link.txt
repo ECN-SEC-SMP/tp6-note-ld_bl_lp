@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/monopoly.dir/main.cpp.o CMakeFiles/monopoly.dir/joueur.cpp.o CMakeFiles/monopoly.dir/case.cpp.o CMakeFiles/monopoly.dir/action.cpp.o CMakeFiles/monopoly.dir/chance.cpp.o CMakeFiles/monopoly.dir/communauté.cpp.o CMakeFiles/monopoly.dir/taxe_de_luxe.cpp.o CMakeFiles/monopoly.dir/impots.cpp.o CMakeFiles/monopoly.dir/aller_en_prison.cpp.o -o monopoly 
