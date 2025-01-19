@@ -1,3 +1,0 @@
-/mnt/c/Users/ldarg/OneDrive/Bureau/cour/smp/tp6/monopoly/build/CMakeFiles/monopoly.dir
-/mnt/c/Users/ldarg/OneDrive/Bureau/cour/smp/tp6/monopoly/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/ldarg/OneDrive/Bureau/cour/smp/tp6/monopoly/build/CMakeFiles/rebuild_cache.dir
