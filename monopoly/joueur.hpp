@@ -18,6 +18,10 @@ class Joueur{
         void setCarteSortir(int carteSortir);
         int getCarteSortir();
         string getNom();
+        void addGare();
+        int getNbGare();
+        void addSP();
+        int getNbSP();
 
 
     protected:
@@ -26,6 +30,8 @@ class Joueur{
         int position;
         int enPrison;
         int carteSortir;
+        int nbGare;
+        int nbSP;
 
 };
 

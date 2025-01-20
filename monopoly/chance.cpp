@@ -13,8 +13,21 @@
 #include <iostream>
 #include <random>
 
+
+/**
+ * @brief Constructeur de la classe Chance
+ * 
+ * @param nom Nom de la case
+ */
+
 Chance::Chance(const string& nom) : Action(nom) {}
 
+
+/**
+ * @brief le joueur pioche une carte chance
+ * 
+ * @param joueur joueur qui joue
+ */
 void Chance::activation(Joueur& joueur) {
     // Exemple d'effet de tirage : ajout ou retrait d'argent
     nom = joueur.getNom();

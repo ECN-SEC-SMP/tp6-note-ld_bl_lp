@@ -44,3 +44,18 @@ int Joueur::getCarteSortir(){
 string Joueur::getNom(){
     return nom;
 }
+void Joueur::addGare(){
+    nbGare = nbGare + 1;
+}
+
+int Joueur::getNbGare(){
+    return nbGare;
+}
+
+void Joueur::addSP(){
+    nbSP = nbSP + 1 ;
+}
+
+int Joueur::getNbSP(){
+    return nbSP;
+}
