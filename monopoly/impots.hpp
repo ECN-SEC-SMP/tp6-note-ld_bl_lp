@@ -6,7 +6,7 @@
 class Impots : public Action {
 public:
     Impots(const string& nom);
-    void taxe(Joueur& joueur); 
+    void activation(Joueur& joueur) override;
 };
 
 #endif 

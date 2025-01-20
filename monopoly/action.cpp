@@ -16,4 +16,4 @@
  * @param nom Nom de la case
  */
 
-Action::Action(const string& nom) : Case(nom) {}
+Action::Action(const string& nom) : Case(nom , 0 ) {}

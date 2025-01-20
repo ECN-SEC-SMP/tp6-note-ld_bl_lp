@@ -1,7 +1,7 @@
 /**
  * @file action.hpp
  * @author PEAN Louis, DARGERE Lucas, LAVAUX Bastien
- * @brief Définition de la classe Parcelle de la classe action
+ * @brief Définition de la classe action
  * @version 0.1
  * @date 2025-01-20
  * 
@@ -14,11 +14,12 @@
 #define ACTION_HPP
 
 #include "case.hpp"
-#include "joueur.hpp" // Assurez-vous d'avoir cette classe définie dans joueur.hpp
+#include "joueur.hpp" 
 
 class Action : public Case {
 public:
     Action(const string& nom);
+    virtual void activation(Joueur& joueur) =0; 
 
 };
 

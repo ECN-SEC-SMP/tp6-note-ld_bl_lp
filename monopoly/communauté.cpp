@@ -4,7 +4,7 @@
 
 Communauté::Communauté(const string& nom) : Action(nom) {}
 
-void Communauté::tirage(Joueur& joueur) {
+void Communauté::activation(Joueur& joueur) {
     // Exemple d'effet de tirage : ajout ou retrait d'argent
     nom = joueur.getNom();
     cout << " Le joueur " +nom +" tire une communauté chance !" << endl;
