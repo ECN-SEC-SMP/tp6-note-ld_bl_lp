@@ -1,6 +1,6 @@
 #include "terrain.hpp"
 
-Terrain::Terrain(string nom,int PrixAchat,int loyer[5]): Actif(nom,true){
+Terrain::Terrain(string nom,int PrixAchat,int loyer[5]): Actif(nom){
     _prixAchat = PrixAchat;
     for (int i = 0; i < 5; i++) {
         _loyer[i] = loyer[i]; // Copie des valeurs une par une

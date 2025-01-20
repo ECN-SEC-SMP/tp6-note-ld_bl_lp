@@ -11,7 +11,7 @@ class Couleur{
 protected:
 
     //0 -> Violet 1 -> Bleu clair, 2 -> Rose, 3 -> Orange, 4 -> Rouge, 5 -> Jaune, 6 -> Vert clair, 7 -> Bleu foncé, 8 -> gare, 9 -> SP
-    vector<vector<pair<Joueur*,string>>> map = {
+    /*vector<vector<pair<Joueur*,string>>> map1 = {
     {{nullptr,"Boulevard de Belleville"},{nullptr,"Rue Lecourbe"}},
     {{nullptr,"Rue de Vaugirard"},{nullptr,"Avenue de la République"},{nullptr,"Rue de Courcelles"}},
     {{nullptr,"Boulevard de la Villette"},{nullptr,"Avenue de Neuilly"},{nullptr,"Rue de Paradis"}},
@@ -22,14 +22,15 @@ protected:
     {{nullptr,"Champs-Élysées"},{nullptr,"Rue de la Paix"}},
     {{nullptr, "Gare Montparnasse"},{nullptr, "Gare de Lyon"},{nullptr, "Gare Saint-Lazare"},{nullptr, "Gare du Nord"}},
     {{nullptr, "Compagnie des Eaux"},{nullptr, "Compagnie de l'Électricité"}}
-};
+};*/
+
+    vector<Case*> _rue;
+    Joueur* _joueur;
 
 public:
-    Couleur();
-    vector<string> listeTerrain(Joueur* joueur);
-    void newProprio(Joueur* newProprio,int groupe, int index);
-    int getNbGare(Joueur* joueur);
-    int getNbSP(Joueur* joueur);
-
+    Couleur(vector<Case*> rue);
+    vector<Case*> listeConstructible(Joueur* joueur);
+    void miseAJour();
+    
 };
 

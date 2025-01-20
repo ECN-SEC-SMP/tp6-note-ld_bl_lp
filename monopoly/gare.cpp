@@ -2,10 +2,10 @@
 
 const int _loyer[5] = {0, 25, 50, 100, 200};
 
-Gare::Gare(string nom): Actif(nom,false){}
+Gare::Gare(string nom): Actif(nom){}
 
 int Gare::tarif(Joueur& joueur){
-    int nbGare = joueur.getNbGare();
+    int nbGare = joueur.addGare();
     return _loyer[nbGare];
 }
 

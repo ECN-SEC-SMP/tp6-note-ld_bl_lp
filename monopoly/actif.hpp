@@ -9,10 +9,10 @@ using namespace std;
 class Actif : public Case {
 protected:
     Joueur *_proprietaire = nullptr;
-    bool    _isConstructible;
+    bool    _isConstructible=0;
 
 public:
-    Actif(string nom, bool constructible);
+    Actif(string nom);
     virtual void achat(Joueur& joueur) =0; 
     ~Actif(){ delete _proprietaire;};
 };
