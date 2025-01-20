@@ -12,10 +12,10 @@ int main() {
     Joueur joueur1("lucas",1000); // Nom : Alice, Solde initial : 1000
 
     // Création d'une case "Chance"
-    Chance chanceCase("Case Chance");
+    /*Chance chanceCase("Case Chance");
     Communauté communauté("Case comunauté");
     TaxeDeLuxe taxe_de_luxe("case taxe de luxe");
-    Impots impots("case Impots");
+    Impots impots("case Impots");*/
     AllerEnPrison allezEnPrison("case Allez en prison");
     
 
@@ -27,8 +27,8 @@ int main() {
     //chanceCase.tirage(joueur1);
     //communauté.tirage(joueur1);
     //taxe_de_luxe.taxe(joueur1);
-    impots.taxe(joueur1);
-    allezEnPrison.gotoprison(joueur1);
+    //impots.taxe(joueur1);
+    allezEnPrison.activation(joueur1);
     // Affichage de l'état final du joueur
     std::cout << "prison : " << joueur1.getEnPrison() << "mono" << std::endl;
     std::cout << "position : " << joueur1.getPosition() << "mono" << std::endl;

@@ -6,7 +6,7 @@
 class Chance : public Action {
 public:
     Chance(const string& nom);
-    void tirage(Joueur& joueur); // Implémentation de l'effet de tirage
+    void activation(Joueur& joueur) override;
 };
 
 #endif // CHANCE_HPP

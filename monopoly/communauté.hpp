@@ -6,7 +6,7 @@
 class Communauté : public Action {
 public:
     Communauté(const string& nom);
-    void tirage(Joueur& joueur); // Implémentation de l'effet de tirage
+    void activation(Joueur& joueur) override;
 };
 
 #endif // Comunauté_HPP
