@@ -20,6 +20,7 @@ set(SOURCES
     impots.cpp
     aller_en_prison.cpp
     simple_visite.cpp
+    maitre.cpp
 
 )
 

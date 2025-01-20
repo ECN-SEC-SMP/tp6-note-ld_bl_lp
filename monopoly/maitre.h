@@ -2,8 +2,9 @@
 #define MAITRE_H
 
 #include <vector>
-#include "Joueur.h"
-#include "GestionnaireCouleur.h" 
+#include "joueur.hpp"
+#include "case.hpp"
+//#include "GestionnaireCouleur.h" 
 #include <iostream>
 
 class Maitre {
@@ -16,10 +17,10 @@ public:
 
 private:
 	// Vérifie si un joueur est en prison
-	int test_prison(&joueur);
+	int test_prison(Joueur &joueur);
 
 	// Gère le mécanisme d'enchère
-	void enchere();
+	void enchere(Case &tile);
 
 	// Gère les actions liées aux cases de type terrain
 	void case_terrain();
@@ -35,9 +36,11 @@ private:
 
 	// Index du joueur actif
 	int joueur_actif_index;
+	int nb_Joeurs;
+	int nb_Cases;
 
 	// Gestionnaire des couleurs
-	GestionnaireCouleur gestionnaire_couleur;
+	//GestionnaireCouleur gestionnaire_couleur;
 };
 
 #endif // MAITRE_H
