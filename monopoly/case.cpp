@@ -26,7 +26,7 @@ Case::Case(string newNom, int newType){
 }
 
 /**
- * @brief  Accesseur de la classe Case
+ * @brief  Accesseur du nom la classe Case
  * 
  * @return nom de la case
  */

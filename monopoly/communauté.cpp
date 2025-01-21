@@ -1,7 +1,7 @@
 /**
- * @file chance.cpp
+ * @file communauté.cpp
  * @author PEAN Louis, DARGERE Lucas, LAVAUX Bastien
- * @brief Description de la classe chance de la classe Action
+ * @brief Description de la classe Communauté de la classe Action
  * @version 0.1
  * @date 2025-01-20
  * 
@@ -15,12 +15,19 @@
 #include <random>
 
 /**
- * @brief Constructeur de la classe Chance
+ * @brief Constructeur de la classe Communauté
  * 
  * @param nom Nom de la case
  */
 
 Communauté::Communauté(const string& nom) : Action(nom) {}
+
+
+/**
+ * @brief le joueur pioche une carte communauté
+ * 
+ * @param joueur joueur qui joue
+ */
 
 void Communauté::activation(Joueur& joueur) {
     // Exemple d'effet de tirage : ajout ou retrait d'argent

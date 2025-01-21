@@ -1,3 +1,14 @@
+/**
+ * @file joueur.hpp
+ * @author PEAN Louis, DARGERE Lucas, LAVAUX Bastien
+ * @brief Définition de la classe Joueur
+ * @version 0.1
+ * @date 2025-01-20
+ * 
+ * @copyright Copyright (c) 2025
+ */
+
+
 #include <string>
 #include <iostream>
 

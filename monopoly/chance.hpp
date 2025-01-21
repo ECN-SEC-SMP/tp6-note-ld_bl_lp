@@ -1,7 +1,7 @@
 /**
- * @file communauté.hpp
+ * @file chance.hpp
  * @author PEAN Louis, DARGERE Lucas, LAVAUX Bastien
- * @brief Définition de la classe Communauté
+ * @brief Définition de la classe Chance
  * @version 0.1
  * @date 2025-01-20
  * 

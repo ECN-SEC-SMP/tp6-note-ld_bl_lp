@@ -1,7 +1,7 @@
 /**
  * @file chance.cpp
  * @author PEAN Louis, DARGERE Lucas, LAVAUX Bastien
- * @brief Description de la classe chance de la classe Action
+ * @brief Description de la classe Chance de la classe Action
  * @version 0.1
  * @date 2025-01-20
  * 
