@@ -1,3 +1,14 @@
+/**
+ * @file chance.hpp
+ * @author PEAN Louis, DARGERE Lucas, LAVAUX Bastien
+ * @brief Définition de la classe Chance
+ * @version 0.1
+ * @date 2025-01-20
+ * 
+ * @copyright Copyright (c) 2025
+ */
+
+
 #ifndef CHANCE_HPP
 #define CHANCE_HPP
 
@@ -6,7 +17,7 @@
 class Chance : public Action {
 public:
     Chance(const string& nom);
-    void tirage(Joueur& joueur); // Implémentation de l'effet de tirage
+    void activation(Joueur& joueur) override;
 };
 
 #endif // CHANCE_HPP

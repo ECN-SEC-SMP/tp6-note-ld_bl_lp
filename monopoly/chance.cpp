@@ -1,10 +1,34 @@
+/**
+ * @file chance.cpp
+ * @author PEAN Louis, DARGERE Lucas, LAVAUX Bastien
+ * @brief Description de la classe Chance de la classe Action
+ * @version 0.1
+ * @date 2025-01-20
+ * 
+ * @copyright Copyright (c) 2025
+ */
+
+
 #include "chance.hpp"
 #include <iostream>
 #include <random>
 
+
+/**
+ * @brief Constructeur de la classe Chance
+ * 
+ * @param nom Nom de la case
+ */
+
 Chance::Chance(const string& nom) : Action(nom) {}
 
-void Chance::tirage(Joueur& joueur) {
+
+/**
+ * @brief le joueur pioche une carte chance
+ * 
+ * @param joueur joueur qui joue
+ */
+void Chance::activation(Joueur& joueur) {
     // Exemple d'effet de tirage : ajout ou retrait d'argent
     nom = joueur.getNom();
     cout << " Le joueur " +nom +" tire une carte chance !" << endl;
