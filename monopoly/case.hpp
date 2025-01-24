@@ -18,7 +18,7 @@
 using namespace std;
 class Case {
     public:
-        Case(string nom , int type);
+        Case(string nom, int type);
         void setNom(string nom);
         string getNom();
         int getType();
