@@ -8,9 +8,10 @@
  * @copyright Copyright (c) 2025
  */
 
-
+#include "case.hpp"
 #include <string>
 #include <iostream>
+#include <vector>
 
 #ifndef JOUEUR_HPP
 #define JOUEUR_HPP
@@ -19,11 +20,11 @@ using namespace std;
 
 class Joueur{
     public:
-        Joueur(string nom, int creationSolde);
+        Joueur(string nom, int creationSolde, std::vector<Case*>* creation_plateau);
         void setSolde(int solde);
         int getSolde();
-        void setPosition(int position);
-        int getPosition();
+        int setPosition(int position);
+        Case* getPosition();
         void setEnPrison(int enPrison);
         int getEnPrison();
         void setCarteSortir(int carteSortir);
@@ -38,11 +39,12 @@ class Joueur{
     protected:
         string nom;
         int solde;
-        int position;
         int enPrison;
         int carteSortir;
         int nbGare;
         int nbSP;
+        std::vector<Case*>* plateau;
+        std::vector<Case*>::iterator position;
 
 };
 

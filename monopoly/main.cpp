@@ -8,8 +8,13 @@
 #include"simple_visite.hpp"
 
 int main() {
+    // Création d'un plateau
+    std::vector<Case*>* plateau_test = new std::vector<Case*>();
+
+    Case* test_case = new Case("Case_test",1234);
+    plateau_test->push_back(test_case);
     // Création d'un joueur
-    Joueur joueur1("lucas",1000); // Nom : Alice, Solde initial : 1000
+    Joueur joueur1("lucas",1000,plateau_test); // Nom : Alice, Solde initial : 1000
 
     // Création d'une case "Chance"
     /*Chance chanceCase("Case Chance");
@@ -21,7 +26,8 @@ int main() {
 
     // Affichage de l'état initial du joueur
     
-    std::cout << "Nom : 1 Solde : " << joueur1.getSolde() << "€" << std::endl;
+    std::cout << "Nom :        " << joueur1.getNom() << std::endl;
+    std::cout << "Solde :      " << joueur1.getSolde() << " monos" << std::endl;
 
     // Appliquer l'effet de la case Chance
     //chanceCase.tirage(joueur1);
@@ -30,9 +36,11 @@ int main() {
     //impots.taxe(joueur1);
     allezEnPrison.activation(joueur1);
     // Affichage de l'état final du joueur
-    std::cout << "prison : " << joueur1.getEnPrison() << "mono" << std::endl;
-    std::cout << "position : " << joueur1.getPosition() << "mono" << std::endl;
-    std::cout << "Nom : 1 Solde : " << joueur1.getSolde() << "mono" << std::endl;
+    std::cout << "prison :         " << joueur1.getEnPrison() << " tours restants" << std::endl;
+    std::cout << "position :       " << joueur1.getPosition()->getNom() << std::endl;
+    std::cout << "Nom : 1 Solde :  " << joueur1.getSolde() << " monos" << std::endl;
+    delete plateau_test;
+
 
     return 0;
 }

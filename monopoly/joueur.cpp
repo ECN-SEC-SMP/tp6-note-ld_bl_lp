@@ -20,12 +20,13 @@
  * @param newNom Nom du joueur
  * @param creationSolde Solde du juoeur a la création 
  */
-Joueur::Joueur(string newNom ,int creationSolde){
+Joueur::Joueur(string newNom ,int creationSolde, std::vector<Case*>* creation_plateau){
     nom =newNom;
     solde = creationSolde;
-    position = 0 ;
     enPrison = 0 ; 
     carteSortir = 0 ;
+    plateau = creation_plateau;
+    position = plateau->begin();
 }
 
 /**
@@ -48,12 +49,28 @@ int Joueur::getSolde(){
 }
 
 /**
- * @brief Setter de la position du joueur
+ * @brief avance le joueur d'un nombre de cases
  * 
  * @param newPosition nouvelle position du joueur
  */
-void Joueur::setPosition(int newPosition){
-    position=newPosition;
+int Joueur::setPosition(int newPosition){
+    int returnValue=0;
+        if((std::distance(plateau->begin(), position) + newPosition) > plateau->size())
+        {
+            returnValue = 1;
+        }
+        int nouvelle_position = (std::distance(plateau->begin(), position) + newPosition) % plateau->size();
+        if(nouvelle_position <0)
+        {
+            returnValue = -1;
+        }else
+        {
+            position = plateau->begin() + nouvelle_position;
+        }
+
+    return returnValue;
+
+
 }
 
 /**
@@ -62,8 +79,8 @@ void Joueur::setPosition(int newPosition){
  * @return position du joueur
  */
 
-int Joueur::getPosition(){
-    return position;
+Case* Joueur::getPosition(){
+    return *position;
 }
 
 

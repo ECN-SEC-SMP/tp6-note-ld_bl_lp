@@ -1,26 +1,122 @@
 #include "maitre.h"
 
 // Constructeur
-Maitre::Maitre() : joueur_actif_index(0) {
+Maitre::Maitre(int nb_J) {
+
+    creation_plateau();
+
+    if(nb_J < 2)
+    {
+        std::cout << "ERROR! pas assez de joueurs! nombre forcé à 2" << std::endl;
+        nb_J = 2;
+    }
+    nb_Joeurs = nb_J;
+
+    creation_joueurs(nb_J);
+    index_joueur_actif = joueurs.begin();
     
 }
 
 // Fonction pour passer au tour suivant
 void Maitre::passer_tour() {
-    // Changer l'index du joueur actif
-    joueur_actif_index = (joueur_actif_index + 1) % joueurs.size();
-
-    //test_prison();
+    Joueur joueur_actif = *index_joueur_actif;
 
 
+    int joueur_en_prison = test_prison(joueur_actif);
+    if(joueur_en_prison ==0)
+    {
+        std::cout << "Au tour de " << joueur_actif.getNom() << " ! Lance les dés!" <<std::endl;  
+        int resultat = lancer_des();
+
+        Case * case_temp = joueur_actif.getPosition();
+        int type_case = case_temp->getType();
+
+        Terrain * case_terrain; //le compilateur ne veut pas de définition dans un case
+        Action * case_action;
+
+        switch (type_case)
+        { 
+            case 0:
+                std::cout <<"ERROR! une case à un type non initialisé! (cette case ne fera rien)" << std::endl;
+                break;
+            case 1:
+                case_terrain = static_cast<Terrain*>(case_temp); //pas de polymorphisme (oups) donc static cast
+                case_terrain_activation(case_terrain);
+                break;
+            case 2:
+                case_action = static_cast<Action*>(case_temp); //pas de polymorphisme (oups) donc static cast
+                case_action_activation(case_action);
+                break;
+            default:
+                std::cout <<"ERROR! une case à un type non connu! (cette case ne fera rien) numéro de type: " << type_case << std::endl;
+                break;
+        }
+    }
     // Appel des autres fonctions nécessaires pour gérer un tour complet
+}
+
+void Maitre::creation_plateau()
+{
+
+}
+
+void Maitre::creation_joueurs(int nb_J)
+{
+    std::string nomJoueur[nb_J];
+    for(int i=0; i< nb_J; i++)
+    {
+        std::cout << "nom du joueur " << i+1 << " : " << std::endl;
+        std::cin >> nomJoueur[i];
+    }
+    for(int i=0; i<nb_J;i++)  joueurs.push_back(Joueur(nomJoueur[i], mono_base, &plateau_jeu));
+}
+
+int Maitre::lancer_des()
+{
+    int resultat1 = 0;
+    int resultat2 = 0;
+    srand(static_cast<unsigned int>(time(0))); // update la seed à chaque lancé, pas sûr que celà ait un impact négatif
+    resultat1 = rand() % 6 + 1;
+    resultat2 = rand() % 6 + 1;
+    if(resultat1 == resultat2)
+    {
+        std::cout << "vous avez fait un double de " << resultat1 << " ! "<< std::endl;
+        return -1;
+    }
+    else 
+    {
+        int total_result = resultat1 + resultat2;
+        std::cout << "vous avez fait " << total_result << " (" << resultat1 << " + " << resultat2 << " )" << std::endl;
+        return total_result;
+    }
 }
 
 int Maitre::test_prison(Joueur &joueur) {
     int nb_tour_prison = joueur.getEnPrison();
+    
     if(nb_tour_prison)
     {
+        std::cout << "Vous lancez les dés pour tenter de sortir!" << std::endl;
+        if(lancer_des() == -1)
+        {
         joueur.setEnPrison(nb_tour_prison-1);
+        std::cout << "Bravo! vous sortez de prison sans payer!" << std::endl;
+        }else
+        {
+            std::cout << "pas de chance! Voulez vous payer pour votre sortie ? (50 mono) (O/N)" << std::endl;
+            char reponse ='N'; 
+            std::cin >> reponse;
+            if(reponse == 'O')
+            {
+                Action * case_prison = static_cast<Action*>(joueur.getPosition()); //pas génial, mais on à oublier de mettre la fonction case en polymorphique donc static cast obligatoire (oups)
+                case_action_activation(case_prison);
+                joueur.setEnPrison(0);
+            }
+        }
+    }
+    if(nb_tour_prison ==0)
+    {
+        std::cout << "vous sortez de prison!" <<std::endl;
     }
     return nb_tour_prison;
 }
@@ -81,12 +177,12 @@ void Maitre::enchere(Case &tile) {
 }
 
 // Gère les actions liées aux cases de type terrain
-void Maitre::case_terrain() {
+void Maitre::case_terrain_activation(Terrain* case_terrain) {
 
 }
 
 // Gère les actions liées aux cases d'action
-void Maitre::case_action() {
+void Maitre::case_action_activation(Action* case_action) {
     
 }
 

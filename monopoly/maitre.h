@@ -2,20 +2,29 @@
 #define MAITRE_H
 
 #include <vector>
+#include <string>
+#include <random>
+#include <ctime>
 #include "joueur.hpp"
 #include "case.hpp"
+#include "terrain.hpp"
+#include "action.hpp"
 //#include "GestionnaireCouleur.h" 
 #include <iostream>
 
 class Maitre {
 public:
 	// Constructeur
-	Maitre();
+	Maitre(int nb_J);
 
 	// Fonction pour passer au tour suivant
 	void passer_tour();
 
 private:
+	const int mono_base =200;
+	void creation_plateau();
+	void creation_joueurs(int nb_J);
+	int lancer_des(); //renvoie le résultat des deux dés ou -1 pour un double
 	// Vérifie si un joueur est en prison
 	int test_prison(Joueur &joueur);
 
@@ -23,21 +32,21 @@ private:
 	void enchere(Case &tile);
 
 	// Gère les actions liées aux cases de type terrain
-	void case_terrain();
+	void case_terrain_activation(Terrain* case_terrain);
 
 	// Gère les actions liées aux cases d'action
-	void case_action();
+	void case_action_activation(Action* case_action);
 
 	// Vérifie les informations ou les états d'un joueur 
 	void verif_joueur();
 
 	// Liste des joueurs
 	std::vector<Joueur> joueurs;
+	std::vector<Case*> plateau_jeu;
 
 	// Index du joueur actif
-	int joueur_actif_index;
+	std::vector<Joueur>::iterator index_joueur_actif;
 	int nb_Joeurs;
-	int nb_Cases;
 
 	// Gestionnaire des couleurs
 	//GestionnaireCouleur gestionnaire_couleur;

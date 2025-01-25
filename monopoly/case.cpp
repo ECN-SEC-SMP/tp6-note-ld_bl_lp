@@ -42,3 +42,7 @@ string Case::getNom() {
 void Case::setNom( string newNom) {
     nom = newNom;
 }
+
+int Case::getType() {
+    return type;
+}
