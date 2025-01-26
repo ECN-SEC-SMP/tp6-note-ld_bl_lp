@@ -21,7 +21,10 @@ set(SOURCES
     aller_en_prison.cpp
     simple_visite.cpp
     maitre.cpp
-
+    terrain.cpp
+    actif.cpp
+    gare.cpp
+    servPublic.cpp 
 )
 
 # Créer l'exécutable

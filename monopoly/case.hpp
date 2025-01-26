@@ -25,7 +25,7 @@ class Case {
 
     protected:
         string nom;
-        int type;   //0: case non définie | 1: case terrain | 2: case action | 3: case prison 
+        int type;   //0: case non définie | 1: case terrain | 2: case action | 3: case prison | 4: case aller en prison
 
 };
 

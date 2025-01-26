@@ -9,7 +9,7 @@ class Terrain : public Actif {
 protected:
     int _prixAchat=0;
     int _nbMaison=0;
-    static int _loyer[5];
+    int _loyer[5];
 
 public:
 
