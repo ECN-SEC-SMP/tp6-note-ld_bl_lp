@@ -11,6 +11,7 @@
   - [3.2. Conception (Diagrammes)](#32-conception-diagrammes)
   - [3.3. Algorithmes](#33-algorithmes)
   - [3.4. Jeux d’essais](#34-jeux-dessais)
+   - [3.4.1. Classe Case](#341-classe-case)
 - [4. Conclusion](#4-conclusion)
 
 ---
@@ -54,6 +55,41 @@ Expliquez les choix algorithmiques pour la gestion des actions de jeu :
 Fournissez des exemples de tests :
 - Scénarios simples : Achat de propriété, paiement de loyer.
 - Scénarios complexes : Construction d’hôtels, faillite d’un joueur.
+
+### 3.4.1. Classe Case 
+
+#### Description
+Réalisation des jeux d'essaies sur la classe Case 
+
+#### Exemples de tests
+1. **joueur qui tombe sur une case Impots** :
+   - **Entrée** : un joueur tombe sur une case Impots.
+   - **Action attendue** : Le joueur perd 200 mono. 
+   - **Résultat** :
+   ![résultat](img/case_Impots.png)
+
+2. **joueur qui tombe sur une case Taxe de luxe** :
+   - **Entrée** : un joueur tombe sur une case taxe de luxe .
+   - **Action attendue** : Le joueur perd 200 mono. 
+   - **Résultat** :
+   ![résultat](img/taxe_de_luxe.png)
+
+3. **joueur qui tombe sur une case Chance** :
+   - **Entrée** : un joueur tombe sur une case Chance
+   - **Action attendue** : Le joueur gagne 200 mono ou perd 200 mono.
+   - **Résultat** :
+   ![résultat](img/chance.png)
+   ![résultat](img/case_chance.png)
+
+4. **joueur qui tombe sur une case Communauté** :
+   - **Entrée** : un joueur tombe sur une case Communauté
+   - **Action attendue** : Le joueur gagne 250 mono ou perd 200 mono. 
+   - **Résultat** :
+   ![résultat](img/com.png)
+   ![résultat](img/case_com.png)
+
+
+
 
 ## 4. Conclusion
 Ce projet permet d’appliquer les concepts d’objet, d’héritage, et de gestion de projet en équipe. Le rendu final comprend :
