@@ -1,0 +1,23 @@
+<map id="/home/h4/Documents/centrale/SMP/tp6/tp6&#45;note&#45;ld_bl_lp/monopoly/taxe_de_luxe.cpp" name="/home/h4/Documents/centrale/SMP/tp6/tp6&#45;note&#45;ld_bl_lp/monopoly/taxe_de_luxe.cpp">
+<area shape="rect" id="Node000001" title="Description de la classe TaxeDeLuxe." alt="" coords="221,5,401,75"/>
+<area shape="rect" id="Node000002" href="$taxe__de__luxe_8hpp.html" title=" " alt="" coords="139,123,273,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,77,231,115,228,111,272,73"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="194,416,274,441"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="314,75,314,207,314,283,308,328,288,369,259,408,254,405,284,367,303,327,309,283,309,207,309,75"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="349,123,421,148"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="340,73,369,110,365,113,336,76"/>
+<area shape="rect" id="Node000003" href="$action_8hpp.html" title="Définition de la classe action." alt="" coords="161,196,251,221"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="209,148,209,182,203,182,203,148"/>
+<area shape="rect" id="Node000004" href="$case_8hpp.html" title="Définition de la classe Case." alt="" coords="194,343,274,368"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="211,221,232,328,227,329,206,222"/>
+<area shape="rect" id="Node000007" href="$joueur_8hpp.html" title="Définition de la classe Joueur." alt="" coords="106,269,197,295"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="199,223,171,260,166,257,195,220"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="94,416,153,441"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="218,370,155,411,152,406,215,366"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="237,368,237,402,231,402,231,368"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="166,293,212,331,208,336,163,297"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="151,295,141,343,130,403,125,402,135,342,146,294"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="157,294,167,328,184,367,214,404,210,408,180,369,162,330,152,296"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,343,68,368"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="134,297,68,338,66,333,132,292"/>
+</map>

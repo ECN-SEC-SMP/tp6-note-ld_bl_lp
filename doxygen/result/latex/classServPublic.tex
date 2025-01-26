@@ -1,0 +1,106 @@
+\doxysection{Serv\+Public Class Reference}
+\hypertarget{classServPublic}{}\label{classServPublic}\index{ServPublic@{ServPublic}}
+
+
+{\ttfamily \#include $<$serv\+Public.\+hpp$>$}
+
+
+
+Inheritance diagram for Serv\+Public\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classServPublic__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Serv\+Public\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classServPublic__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServPublic_a642b4e5c4bab1b4b8e85a9304bacea2a}{Serv\+Public}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}})
+\item 
+void \mbox{\hyperlink{classServPublic_a3c7c53d7109e7eb350a6c92d5fad4961}{achat}} (\mbox{\hyperlink{classJoueur}{Joueur}} \&joueur, bool enchere) override
+\item 
+int \mbox{\hyperlink{classServPublic_afcd191134bc78a8f9445246d8394d8d9}{tarif}} (\mbox{\hyperlink{classJoueur}{Joueur}} \&joueur, int de1, int de2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classActif}{Actif}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classActif_abf7239e93778dceb0fcd16d552c8003a}{Actif}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}})
+\item 
+\mbox{\hyperlink{classJoueur}{Joueur}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classActif_ac47b93079b31cfceb54288e4d0ec3804}{get\+Proprio}} ()
+\item 
+void \mbox{\hyperlink{classActif_ac2ec55895cf0b503fca6ef83ddbf437b}{perte\+\_\+joueur}} (\mbox{\hyperlink{classJoueur}{Joueur}} \texorpdfstring{$\ast$}{*}joueur)
+\item 
+\mbox{\hyperlink{classActif_a5225711c17f943db6d12d1d6dfa747dc}{\texorpdfstring{$\sim$}{\string~}\+Actif}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCase}{Case}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCase_a06b17b961a5f886947cfd52061b6b06f}{Case}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}}, int \mbox{\hyperlink{classCase_af1ce512b639ce2ab7011c43870289b94}{type}})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classCase}{Case}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCase_a4f1eb37801349d45a437ab28d2635106}{set\+Nom}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}})
+\begin{DoxyCompactList}\small\item\em Setter du nom de la case. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCase_a73e3d79e2ace566f899d504640161883}{get\+Nom}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du nom la classe \doxylink{classCase}{Case}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCase_a96a25a23a8de228305b52757947b1275}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classActif}{Actif}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJoueur}{Joueur}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classActif_a00cef18d9977136850366ce25918e437}{\+\_\+proprietaire}} = nullptr
+\item 
+bool \mbox{\hyperlink{classActif_a8cf2d555b5f438865a88427a04b75080}{\+\_\+is\+Constructible}} =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCase}{Case}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}}
+\item 
+int \mbox{\hyperlink{classCase_af1ce512b639ce2ab7011c43870289b94}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classServPublic_a642b4e5c4bab1b4b8e85a9304bacea2a}\label{classServPublic_a642b4e5c4bab1b4b8e85a9304bacea2a} 
+\index{ServPublic@{ServPublic}!ServPublic@{ServPublic}}
+\index{ServPublic@{ServPublic}!ServPublic@{ServPublic}}
+\doxysubsubsection{\texorpdfstring{ServPublic()}{ServPublic()}}
+{\footnotesize\ttfamily Serv\+Public\+::\+Serv\+Public (\begin{DoxyParamCaption}\item[{string}]{nom }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classServPublic_a3c7c53d7109e7eb350a6c92d5fad4961}\label{classServPublic_a3c7c53d7109e7eb350a6c92d5fad4961} 
+\index{ServPublic@{ServPublic}!achat@{achat}}
+\index{achat@{achat}!ServPublic@{ServPublic}}
+\doxysubsubsection{\texorpdfstring{achat()}{achat()}}
+{\footnotesize\ttfamily void Serv\+Public\+::achat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{joueur,  }\item[{bool}]{enchere }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classActif_a2bd3c84315f746a34e2682ed1a910b27}{Actif}}.
+
+\Hypertarget{classServPublic_afcd191134bc78a8f9445246d8394d8d9}\label{classServPublic_afcd191134bc78a8f9445246d8394d8d9} 
+\index{ServPublic@{ServPublic}!tarif@{tarif}}
+\index{tarif@{tarif}!ServPublic@{ServPublic}}
+\doxysubsubsection{\texorpdfstring{tarif()}{tarif()}}
+{\footnotesize\ttfamily int Serv\+Public\+::tarif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{joueur,  }\item[{int}]{de1,  }\item[{int}]{de2 }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/h4/\+Documents/centrale/\+SMP/tp6/tp6-\/note-\/ld\+\_\+bl\+\_\+lp/monopoly/\mbox{\hyperlink{servPublic_8hpp}{serv\+Public.\+hpp}}\item 
+/home/h4/\+Documents/centrale/\+SMP/tp6/tp6-\/note-\/ld\+\_\+bl\+\_\+lp/monopoly/\mbox{\hyperlink{servPublic_8cpp}{serv\+Public.\+cpp}}\end{DoxyCompactItemize}

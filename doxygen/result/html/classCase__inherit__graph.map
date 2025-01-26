@@ -1,0 +1,25 @@
+<map id="Case" name="Case">
+<area shape="rect" id="Node000001" title=" " alt="" coords="322,5,377,31"/>
+<area shape="rect" id="Node000002" href="$classActif.html" title=" " alt="" coords="154,79,206,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="311,38,207,82,205,77,309,33"/>
+<area shape="rect" id="Node000006" href="$classAction.html" title=" " alt="" coords="539,79,602,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="391,30,540,77,538,82,389,35"/>
+<area shape="rect" id="Node000003" href="$classGare.html" title=" " alt="" coords="5,152,59,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="145,112,57,154,55,149,143,107"/>
+<area shape="rect" id="Node000004" href="$classServPublic.html" title=" " alt="" coords="83,152,173,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="166,117,139,153,134,150,161,114"/>
+<area shape="rect" id="Node000005" href="$classTerrain.html" title=" " alt="" coords="197,152,264,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="199,114,225,150,220,153,194,117"/>
+<area shape="rect" id="Node000007" href="$classAllerEnPrison.html" title=" " alt="" coords="289,152,397,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="527,109,380,155,379,149,525,104"/>
+<area shape="rect" id="Node000008" href="$classChance.html" title=" " alt="" coords="421,152,491,177"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="542,113,476,154,473,150,539,109"/>
+<area shape="rect" id="Node000009" href="$classCommunaut_xC3_xA9.html" title=" " alt="" coords="515,152,626,177"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="573,118,573,152,568,152,568,118"/>
+<area shape="rect" id="Node000010" href="$classImpots.html" title=" " alt="" coords="651,152,717,177"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="602,109,667,150,664,154,599,114"/>
+<area shape="rect" id="Node000011" href="$classSimpleVisite.html" title=" " alt="" coords="741,152,845,177"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="616,104,758,149,756,154,614,109"/>
+<area shape="rect" id="Node000012" href="$classTaxeDeLuxe.html" title=" " alt="" coords="869,152,968,177"/>
+<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="616,99,870,151,869,156,615,104"/>
+</map>

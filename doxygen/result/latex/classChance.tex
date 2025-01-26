@@ -1,0 +1,103 @@
+\doxysection{Chance Class Reference}
+\hypertarget{classChance}{}\label{classChance}\index{Chance@{Chance}}
+
+
+{\ttfamily \#include $<$chance.\+hpp$>$}
+
+
+
+Inheritance diagram for Chance\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classChance__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Chance\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classChance__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classChance_ac5035781a3c4b77605fb4770fd1bc12d}{Chance}} (const string \&\mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classChance}{Chance}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChance_a82c40d8657833c90c9ebf248ae5e37ba}{activation}} (\mbox{\hyperlink{classJoueur}{Joueur}} \&joueur) override
+\begin{DoxyCompactList}\small\item\em le joueur pioche une carte chance \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classAction}{Action}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAction_a3f72b127011f9a3db8a08776011c68db}{Action}} (const string \&\mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classAction}{Action}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCase}{Case}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCase_a06b17b961a5f886947cfd52061b6b06f}{Case}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}}, int \mbox{\hyperlink{classCase_af1ce512b639ce2ab7011c43870289b94}{type}})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classCase}{Case}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCase_a4f1eb37801349d45a437ab28d2635106}{set\+Nom}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}})
+\begin{DoxyCompactList}\small\item\em Setter du nom de la case. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCase_a73e3d79e2ace566f899d504640161883}{get\+Nom}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du nom la classe \doxylink{classCase}{Case}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCase_a96a25a23a8de228305b52757947b1275}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCase}{Case}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}}
+\item 
+int \mbox{\hyperlink{classCase_af1ce512b639ce2ab7011c43870289b94}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classChance_ac5035781a3c4b77605fb4770fd1bc12d}\label{classChance_ac5035781a3c4b77605fb4770fd1bc12d} 
+\index{Chance@{Chance}!Chance@{Chance}}
+\index{Chance@{Chance}!Chance@{Chance}}
+\doxysubsubsection{\texorpdfstring{Chance()}{Chance()}}
+{\footnotesize\ttfamily Chance\+::\+Chance (\begin{DoxyParamCaption}\item[{const string \&}]{nom }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{classChance}{Chance}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Nom de la case \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classChance_a82c40d8657833c90c9ebf248ae5e37ba}\label{classChance_a82c40d8657833c90c9ebf248ae5e37ba} 
+\index{Chance@{Chance}!activation@{activation}}
+\index{activation@{activation}!Chance@{Chance}}
+\doxysubsubsection{\texorpdfstring{activation()}{activation()}}
+{\footnotesize\ttfamily void Chance\+::activation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{joueur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+le joueur pioche une carte chance 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joueur} & joueur qui joue \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classAction_aef50f172bf677292240e2240ad839bc1}{Action}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/h4/\+Documents/centrale/\+SMP/tp6/tp6-\/note-\/ld\+\_\+bl\+\_\+lp/monopoly/\mbox{\hyperlink{chance_8hpp}{chance.\+hpp}}\item 
+/home/h4/\+Documents/centrale/\+SMP/tp6/tp6-\/note-\/ld\+\_\+bl\+\_\+lp/monopoly/\mbox{\hyperlink{chance_8cpp}{chance.\+cpp}}\end{DoxyCompactItemize}

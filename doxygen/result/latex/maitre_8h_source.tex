@@ -1,0 +1,66 @@
+\doxysection{maitre.\+h}
+\hypertarget{maitre_8h_source}{}\label{maitre_8h_source}\index{/home/h4/Documents/centrale/SMP/tp6/tp6-\/note-\/ld\_bl\_lp/monopoly/maitre.h@{/home/h4/Documents/centrale/SMP/tp6/tp6-\/note-\/ld\_bl\_lp/monopoly/maitre.h}}
+\mbox{\hyperlink{maitre_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAITRE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAITRE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{joueur_8hpp}{joueur.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{case_8hpp}{case.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{terrain_8hpp}{terrain.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{action_8hpp}{action.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{couleur_8hpp}{couleur.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\#include\ "{}GestionnaireCouleur.h"{}\ }}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMaitre}{Maitre}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Constructeur}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classMaitre}{Maitre}}(\textcolor{keywordtype}{int}\ nb\_J);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Fonction\ pour\ passer\ au\ tour\ suivant}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaitre_a169c96bc66f402395d34ff2bcd0093b7}{passer\_tour}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ mono\_base\ =200;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ creation\_plateau();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ creation\_joueurs(\textcolor{keywordtype}{int}\ nb\_J);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ lancer\_des();\ \textcolor{comment}{//renvoie\ le\ résultat\ des\ deux\ dés\ ou\ -\/1\ pour\ un\ double}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Vérifie\ si\ un\ joueur\ est\ en\ prison}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ test\_prison(\mbox{\hyperlink{classJoueur}{Joueur}}\ \&joueur);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_joueur\_en\_prison(\mbox{\hyperlink{classJoueur}{Joueur}}\ \&joueur);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Gère\ le\ mécanisme\ d'enchère}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ enchere(\mbox{\hyperlink{classTerrain}{Terrain}}\ \&tile);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ achat\_immobillier();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Gère\ les\ actions\ liées\ aux\ cases\ de\ type\ terrain}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ case\_terrain\_activation(\mbox{\hyperlink{classTerrain}{Terrain}}*\ case\_terrain);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ Gère\ les\ actions\ liées\ aux\ cases\ d'action}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ case\_action\_activation(\mbox{\hyperlink{classAction}{Action}}*\ case\_action);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Vérifie\ les\ informations\ ou\ les\ états\ d'un\ joueur\ }}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ verif\_joueur();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ std::vector<Case*>\ liste\_case\_constructibles();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ test\_proprio\_couleurs();}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ Liste\ des\ joueurs}}
+\DoxyCodeLine{00049\ \ \ \ \ std::vector<Joueur>\ joueurs;}
+\DoxyCodeLine{00050\ \ \ \ \ std::vector<Case*>\ plateau\_jeu;}
+\DoxyCodeLine{00051\ \ \ \ \ std::vector<Couleur>\ liste\_couleurs;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Index\ du\ joueur\ actif}}
+\DoxyCodeLine{00053\ \ \ \ \ std::vector<Joueur>::iterator\ index\_joueur\_actif;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\_Joeurs;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Gestionnaire\ des\ couleurs}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//GestionnaireCouleur\ gestionnaire\_couleur;}}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAITRE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,27 @@
+\doxysection{actif.\+hpp}
+\hypertarget{actif_8hpp_source}{}\label{actif_8hpp_source}\index{/home/h4/Documents/centrale/SMP/tp6/tp6-\/note-\/ld\_bl\_lp/monopoly/actif.hpp@{/home/h4/Documents/centrale/SMP/tp6/tp6-\/note-\/ld\_bl\_lp/monopoly/actif.hpp}}
+\mbox{\hyperlink{actif_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{case_8hpp}{case.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{joueur_8hpp}{joueur.hpp}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classActif}{Actif}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCase}{Case}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classJoueur}{Joueur}}\ *\mbox{\hyperlink{classActif_a00cef18d9977136850366ce25918e437}{\_proprietaire}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{classActif_a8cf2d555b5f438865a88427a04b75080}{\_isConstructible}}=0;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classActif}{Actif}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}});}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classActif_a2bd3c84315f746a34e2682ed1a910b27}{achat}}(\mbox{\hyperlink{classJoueur}{Joueur}}\&\ joueur,\ \textcolor{keywordtype}{bool}\ enchere)\ =0;\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classJoueur}{Joueur}}\ *\mbox{\hyperlink{classActif_ac47b93079b31cfceb54288e4d0ec3804}{getProprio}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classActif_ac2ec55895cf0b503fca6ef83ddbf437b}{perte\_joueur}}(\mbox{\hyperlink{classJoueur}{Joueur}}\ *joueur);}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classActif_a5225711c17f943db6d12d1d6dfa747dc}{\string~Actif}}()\{\ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classActif_a00cef18d9977136850366ce25918e437}{\_proprietaire}};\};}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+
+\end{DoxyCode}

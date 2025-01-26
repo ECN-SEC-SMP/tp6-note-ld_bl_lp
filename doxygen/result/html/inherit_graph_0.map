@@ -1,0 +1,25 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classCase.html" title=" " alt="" coords="5,179,60,204"/>
+<area shape="rect" id="Node000001" href="$classActif.html" title=" " alt="" coords="113,80,165,105"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="56,167,122,104,126,108,59,171"/>
+<area shape="rect" id="Node000005" href="$classAction.html" title=" " alt="" coords="108,252,171,277"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="65,210,121,250,118,254,62,214"/>
+<area shape="rect" id="Node000002" href="$classGare.html" title=" " alt="" coords="247,5,301,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="169,70,217,40,246,26,248,31,220,44,171,74"/>
+<area shape="rect" id="Node000003" href="$classServPublic.html" title=" " alt="" coords="229,55,319,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="178,83,228,73,229,78,179,88"/>
+<area shape="rect" id="Node000004" href="$classTerrain.html" title=" " alt="" coords="241,104,307,129"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="179,97,241,108,240,113,178,102"/>
+<area shape="rect" id="Node000006" href="$classAllerEnPrison.html" title=" " alt="" coords="220,153,328,179"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="159,240,185,213,217,188,238,176,240,181,220,192,189,217,163,243"/>
+<area shape="rect" id="Node000007" href="$classChance.html" title=" " alt="" coords="239,203,309,228"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="183,246,238,226,239,231,185,251"/>
+<area shape="rect" id="Node000008" href="$classCommunaut_xC3_xA9.html" title=" " alt="" coords="219,252,329,277"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="185,262,218,262,218,267,185,267"/>
+<area shape="rect" id="Node000009" href="$classImpots.html" title=" " alt="" coords="241,301,307,327"/>
+<area shape="poly" id="edge9_Node000005_Node000009" title=" " alt="" coords="185,278,241,299,239,304,183,283"/>
+<area shape="rect" id="Node000010" href="$classSimpleVisite.html" title=" " alt="" coords="222,351,326,376"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="163,285,189,311,220,336,242,348,240,353,217,340,186,315,159,289"/>
+<area shape="rect" id="Node000011" href="$classTaxeDeLuxe.html" title=" " alt="" coords="225,400,323,425"/>
+<area shape="poly" id="edge11_Node000005_Node000011" title=" " alt="" coords="154,288,180,337,199,363,220,385,239,398,236,402,217,389,195,366,176,340,149,291"/>
+</map>

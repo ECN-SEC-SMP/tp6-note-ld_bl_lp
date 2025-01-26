@@ -1,0 +1,307 @@
+\doxysection{Joueur Class Reference}
+\hypertarget{classJoueur}{}\label{classJoueur}\index{Joueur@{Joueur}}
+
+
+{\ttfamily \#include $<$joueur.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJoueur_ad9a7f02853d1adc164e4e2e2f173b2d3}{Joueur}} (string \mbox{\hyperlink{classJoueur_a251a7192f61dae541f80cbff3914f208}{nom}}, int creation\+Solde, std\+::vector$<$ \mbox{\hyperlink{classCase}{Case}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}creation\+\_\+plateau)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classJoueur}{Joueur}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_ad445de3638ad860f6adfe32dad6cc5d2}{set\+Solde}} (int \mbox{\hyperlink{classJoueur_a8c2a335a4551dc3a094898b13fdac013}{solde}})
+\begin{DoxyCompactList}\small\item\em Setter du solde du joueur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJoueur_a2241c6234e3d842788752dbf82dcc99d}{get\+Solde}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du solde du joueur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJoueur_ad3c09f36fccb8f82602fa6cec6c94fa2}{set\+Position}} (int \mbox{\hyperlink{classJoueur_a0289be40651cceba0cc995e03c22c852}{position}})
+\begin{DoxyCompactList}\small\item\em avance le joueur d\textquotesingle{}un nombre de cases \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCase}{Case}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classJoueur_a528cac966c6cfeab47e666ce3b2735c2}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de la position du joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_a46f17b60613cdbbc970231a1525c90de}{set\+En\+Prison}} (int \mbox{\hyperlink{classJoueur_acef1c5bc19cdb20c738d55b6517de36a}{en\+Prison}})
+\begin{DoxyCompactList}\small\item\em Setter du nombre de tour en prison du joueur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJoueur_aae8cc39d2a71737f1485a2527ef0bc44}{get\+En\+Prison}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du nombre de tour en prison du joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_a8e9a10d2639d61b4057586f8e7b92e9b}{set\+Carte\+Sortir}} (int \mbox{\hyperlink{classJoueur_ab123a076195dacc5cae140d1241e0a5b}{carte\+Sortir}})
+\begin{DoxyCompactList}\small\item\em Setter de la carte de sortie prison du joueur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJoueur_ac369cf69f5d23bf6921867d6945ddd0f}{get\+Carte\+Sortir}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du nombre de carte sortir de prison du joueur. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classJoueur_a8667184743d7527bd7c7499452dccd83}{get\+Nom}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du nom du joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_a666b0d95ea11afd27141d19f11a2fc7c}{add\+Gare}} ()
+\begin{DoxyCompactList}\small\item\em ajout d\textquotesingle{}une gare au joueur \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJoueur_ad7b265cf5d480f5315dd256a722dcb44}{get\+Nb\+Gare}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du nombre de gare du joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_a14f7de92dbcf0d1091472b53ddd6eadc}{add\+SP}} ()
+\begin{DoxyCompactList}\small\item\em ajout d\textquotesingle{}un service public au joueur \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJoueur_a6cf7fa1318dc8890310798f5452a5905}{get\+Nb\+SP}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du nombre de Service Public du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classJoueur_a251a7192f61dae541f80cbff3914f208}{nom}}
+\item 
+int \mbox{\hyperlink{classJoueur_a8c2a335a4551dc3a094898b13fdac013}{solde}}
+\item 
+int \mbox{\hyperlink{classJoueur_acef1c5bc19cdb20c738d55b6517de36a}{en\+Prison}}
+\item 
+int \mbox{\hyperlink{classJoueur_ab123a076195dacc5cae140d1241e0a5b}{carte\+Sortir}}
+\item 
+int \mbox{\hyperlink{classJoueur_ad782865e5846eb1d0c837f6fbedfb9c4}{nb\+Gare}}
+\item 
+int \mbox{\hyperlink{classJoueur_a7a10ce19e8f34b1559335ce3ff8cd461}{nb\+SP}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classCase}{Case}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classJoueur_a5cfb8f146a8768985b298874d7af3c11}{plateau}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classCase}{Case}} \texorpdfstring{$\ast$}{*} $>$\+::iterator \mbox{\hyperlink{classJoueur_a0289be40651cceba0cc995e03c22c852}{position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classJoueur_ad9a7f02853d1adc164e4e2e2f173b2d3}\label{classJoueur_ad9a7f02853d1adc164e4e2e2f173b2d3} 
+\index{Joueur@{Joueur}!Joueur@{Joueur}}
+\index{Joueur@{Joueur}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{Joueur()}{Joueur()}}
+{\footnotesize\ttfamily Joueur\+::\+Joueur (\begin{DoxyParamCaption}\item[{string}]{new\+Nom,  }\item[{int}]{creation\+Solde,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classCase}{Case}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{creation\+\_\+plateau }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{classJoueur}{Joueur}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Nom} & Nom du joueur \\
+\hline
+{\em creation\+Solde} & Solde du juoeur a la création \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classJoueur_a666b0d95ea11afd27141d19f11a2fc7c}\label{classJoueur_a666b0d95ea11afd27141d19f11a2fc7c} 
+\index{Joueur@{Joueur}!addGare@{addGare}}
+\index{addGare@{addGare}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{addGare()}{addGare()}}
+{\footnotesize\ttfamily void Joueur\+::add\+Gare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ajout d\textquotesingle{}une gare au joueur 
+
+\Hypertarget{classJoueur_a14f7de92dbcf0d1091472b53ddd6eadc}\label{classJoueur_a14f7de92dbcf0d1091472b53ddd6eadc} 
+\index{Joueur@{Joueur}!addSP@{addSP}}
+\index{addSP@{addSP}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{addSP()}{addSP()}}
+{\footnotesize\ttfamily void Joueur\+::add\+SP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ajout d\textquotesingle{}un service public au joueur 
+
+\Hypertarget{classJoueur_ac369cf69f5d23bf6921867d6945ddd0f}\label{classJoueur_ac369cf69f5d23bf6921867d6945ddd0f} 
+\index{Joueur@{Joueur}!getCarteSortir@{getCarteSortir}}
+\index{getCarteSortir@{getCarteSortir}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getCarteSortir()}{getCarteSortir()}}
+{\footnotesize\ttfamily int Joueur\+::get\+Carte\+Sortir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur du nombre de carte sortir de prison du joueur. 
+
+\begin{DoxyReturn}{Returns}
+nombre de carte sortir de prison du joueur 
+\end{DoxyReturn}
+\Hypertarget{classJoueur_aae8cc39d2a71737f1485a2527ef0bc44}\label{classJoueur_aae8cc39d2a71737f1485a2527ef0bc44} 
+\index{Joueur@{Joueur}!getEnPrison@{getEnPrison}}
+\index{getEnPrison@{getEnPrison}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getEnPrison()}{getEnPrison()}}
+{\footnotesize\ttfamily int Joueur\+::get\+En\+Prison (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur du nombre de tour en prison du joueur. 
+
+\begin{DoxyReturn}{Returns}
+nombre de tour en prison du joueur 
+\end{DoxyReturn}
+\Hypertarget{classJoueur_ad7b265cf5d480f5315dd256a722dcb44}\label{classJoueur_ad7b265cf5d480f5315dd256a722dcb44} 
+\index{Joueur@{Joueur}!getNbGare@{getNbGare}}
+\index{getNbGare@{getNbGare}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getNbGare()}{getNbGare()}}
+{\footnotesize\ttfamily int Joueur\+::get\+Nb\+Gare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur du nombre de gare du joueur. 
+
+\begin{DoxyReturn}{Returns}
+nombre de gare du joueur 
+\end{DoxyReturn}
+\Hypertarget{classJoueur_a6cf7fa1318dc8890310798f5452a5905}\label{classJoueur_a6cf7fa1318dc8890310798f5452a5905} 
+\index{Joueur@{Joueur}!getNbSP@{getNbSP}}
+\index{getNbSP@{getNbSP}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getNbSP()}{getNbSP()}}
+{\footnotesize\ttfamily int Joueur\+::get\+Nb\+SP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur du nombre de Service Public du joueur. 
+
+\begin{DoxyReturn}{Returns}
+nombre de Service Public du joueur 
+\end{DoxyReturn}
+\Hypertarget{classJoueur_a8667184743d7527bd7c7499452dccd83}\label{classJoueur_a8667184743d7527bd7c7499452dccd83} 
+\index{Joueur@{Joueur}!getNom@{getNom}}
+\index{getNom@{getNom}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getNom()}{getNom()}}
+{\footnotesize\ttfamily string Joueur\+::get\+Nom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur du nom du joueur. 
+
+\begin{DoxyReturn}{Returns}
+nombre du joueur 
+\end{DoxyReturn}
+\Hypertarget{classJoueur_a528cac966c6cfeab47e666ce3b2735c2}\label{classJoueur_a528cac966c6cfeab47e666ce3b2735c2} 
+\index{Joueur@{Joueur}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCase}{Case}} \texorpdfstring{$\ast$}{*} Joueur\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur de la position du joueur. 
+
+\begin{DoxyReturn}{Returns}
+position du joueur 
+\end{DoxyReturn}
+\Hypertarget{classJoueur_a2241c6234e3d842788752dbf82dcc99d}\label{classJoueur_a2241c6234e3d842788752dbf82dcc99d} 
+\index{Joueur@{Joueur}!getSolde@{getSolde}}
+\index{getSolde@{getSolde}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getSolde()}{getSolde()}}
+{\footnotesize\ttfamily int Joueur\+::get\+Solde (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesseur du solde du joueur. 
+
+\begin{DoxyReturn}{Returns}
+solde du joueur 
+\end{DoxyReturn}
+\Hypertarget{classJoueur_a8e9a10d2639d61b4057586f8e7b92e9b}\label{classJoueur_a8e9a10d2639d61b4057586f8e7b92e9b} 
+\index{Joueur@{Joueur}!setCarteSortir@{setCarteSortir}}
+\index{setCarteSortir@{setCarteSortir}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{setCarteSortir()}{setCarteSortir()}}
+{\footnotesize\ttfamily void Joueur\+::set\+Carte\+Sortir (\begin{DoxyParamCaption}\item[{int}]{new\+Carte\+Sortir }\end{DoxyParamCaption})}
+
+
+
+Setter de la carte de sortie prison du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Carte\+Sortir} & Nombre de carte Sortir de prison \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classJoueur_a46f17b60613cdbbc970231a1525c90de}\label{classJoueur_a46f17b60613cdbbc970231a1525c90de} 
+\index{Joueur@{Joueur}!setEnPrison@{setEnPrison}}
+\index{setEnPrison@{setEnPrison}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{setEnPrison()}{setEnPrison()}}
+{\footnotesize\ttfamily void Joueur\+::set\+En\+Prison (\begin{DoxyParamCaption}\item[{int}]{tour\+En\+Prison }\end{DoxyParamCaption})}
+
+
+
+Setter du nombre de tour en prison du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tour} & en prison nombre de tour en prison \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classJoueur_ad3c09f36fccb8f82602fa6cec6c94fa2}\label{classJoueur_ad3c09f36fccb8f82602fa6cec6c94fa2} 
+\index{Joueur@{Joueur}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily int Joueur\+::set\+Position (\begin{DoxyParamCaption}\item[{int}]{new\+Position }\end{DoxyParamCaption})}
+
+
+
+avance le joueur d\textquotesingle{}un nombre de cases 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & nouvelle position du joueur \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classJoueur_ad445de3638ad860f6adfe32dad6cc5d2}\label{classJoueur_ad445de3638ad860f6adfe32dad6cc5d2} 
+\index{Joueur@{Joueur}!setSolde@{setSolde}}
+\index{setSolde@{setSolde}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{setSolde()}{setSolde()}}
+{\footnotesize\ttfamily void Joueur\+::set\+Solde (\begin{DoxyParamCaption}\item[{int}]{add }\end{DoxyParamCaption})}
+
+
+
+Setter du solde du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em add} & solde a ajouter ou enlever \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classJoueur_ab123a076195dacc5cae140d1241e0a5b}\label{classJoueur_ab123a076195dacc5cae140d1241e0a5b} 
+\index{Joueur@{Joueur}!carteSortir@{carteSortir}}
+\index{carteSortir@{carteSortir}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{carteSortir}{carteSortir}}
+{\footnotesize\ttfamily int Joueur\+::carte\+Sortir\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classJoueur_acef1c5bc19cdb20c738d55b6517de36a}\label{classJoueur_acef1c5bc19cdb20c738d55b6517de36a} 
+\index{Joueur@{Joueur}!enPrison@{enPrison}}
+\index{enPrison@{enPrison}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{enPrison}{enPrison}}
+{\footnotesize\ttfamily int Joueur\+::en\+Prison\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classJoueur_ad782865e5846eb1d0c837f6fbedfb9c4}\label{classJoueur_ad782865e5846eb1d0c837f6fbedfb9c4} 
+\index{Joueur@{Joueur}!nbGare@{nbGare}}
+\index{nbGare@{nbGare}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{nbGare}{nbGare}}
+{\footnotesize\ttfamily int Joueur\+::nb\+Gare\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classJoueur_a7a10ce19e8f34b1559335ce3ff8cd461}\label{classJoueur_a7a10ce19e8f34b1559335ce3ff8cd461} 
+\index{Joueur@{Joueur}!nbSP@{nbSP}}
+\index{nbSP@{nbSP}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{nbSP}{nbSP}}
+{\footnotesize\ttfamily int Joueur\+::nb\+SP\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classJoueur_a251a7192f61dae541f80cbff3914f208}\label{classJoueur_a251a7192f61dae541f80cbff3914f208} 
+\index{Joueur@{Joueur}!nom@{nom}}
+\index{nom@{nom}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{nom}{nom}}
+{\footnotesize\ttfamily string Joueur\+::nom\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classJoueur_a5cfb8f146a8768985b298874d7af3c11}\label{classJoueur_a5cfb8f146a8768985b298874d7af3c11} 
+\index{Joueur@{Joueur}!plateau@{plateau}}
+\index{plateau@{plateau}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{plateau}{plateau}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classCase}{Case}}\texorpdfstring{$\ast$}{*}$>$\texorpdfstring{$\ast$}{*} Joueur\+::plateau\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classJoueur_a0289be40651cceba0cc995e03c22c852}\label{classJoueur_a0289be40651cceba0cc995e03c22c852} 
+\index{Joueur@{Joueur}!position@{position}}
+\index{position@{position}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classCase}{Case}}\texorpdfstring{$\ast$}{*}$>$\+::iterator Joueur\+::position\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classJoueur_a8c2a335a4551dc3a094898b13fdac013}\label{classJoueur_a8c2a335a4551dc3a094898b13fdac013} 
+\index{Joueur@{Joueur}!solde@{solde}}
+\index{solde@{solde}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{solde}{solde}}
+{\footnotesize\ttfamily int Joueur\+::solde\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/h4/\+Documents/centrale/\+SMP/tp6/tp6-\/note-\/ld\+\_\+bl\+\_\+lp/monopoly/\mbox{\hyperlink{joueur_8hpp}{joueur.\+hpp}}\item 
+/home/h4/\+Documents/centrale/\+SMP/tp6/tp6-\/note-\/ld\+\_\+bl\+\_\+lp/monopoly/\mbox{\hyperlink{joueur_8cpp}{joueur.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,120 @@
+\doxysection{Gare Class Reference}
+\hypertarget{classGare}{}\label{classGare}\index{Gare@{Gare}}
+
+
+{\ttfamily \#include $<$gare.\+hpp$>$}
+
+
+
+Inheritance diagram for Gare\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{classGare__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Gare\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classGare__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGare_a2b1d438b01c10f61ebec5477e14f0b7e}{Gare}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}})
+\item 
+void \mbox{\hyperlink{classGare_a5e7bb5f894576b48e6b992fe71b3c1dc}{achat}} (\mbox{\hyperlink{classJoueur}{Joueur}} \&joueur, bool enchere) override
+\item 
+int \mbox{\hyperlink{classGare_a0c55d0ed905a59f0aaf5a798f810747d}{tarif}} (\mbox{\hyperlink{classJoueur}{Joueur}} \&joueur)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classActif}{Actif}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classActif_abf7239e93778dceb0fcd16d552c8003a}{Actif}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}})
+\item 
+\mbox{\hyperlink{classJoueur}{Joueur}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classActif_ac47b93079b31cfceb54288e4d0ec3804}{get\+Proprio}} ()
+\item 
+void \mbox{\hyperlink{classActif_ac2ec55895cf0b503fca6ef83ddbf437b}{perte\+\_\+joueur}} (\mbox{\hyperlink{classJoueur}{Joueur}} \texorpdfstring{$\ast$}{*}joueur)
+\item 
+\mbox{\hyperlink{classActif_a5225711c17f943db6d12d1d6dfa747dc}{\texorpdfstring{$\sim$}{\string~}\+Actif}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCase}{Case}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCase_a06b17b961a5f886947cfd52061b6b06f}{Case}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}}, int \mbox{\hyperlink{classCase_af1ce512b639ce2ab7011c43870289b94}{type}})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classCase}{Case}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCase_a4f1eb37801349d45a437ab28d2635106}{set\+Nom}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}})
+\begin{DoxyCompactList}\small\item\em Setter du nom de la case. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCase_a73e3d79e2ace566f899d504640161883}{get\+Nom}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du nom la classe \doxylink{classCase}{Case}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCase_a96a25a23a8de228305b52757947b1275}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classGare_abfadf10575003903741e037a5e1ca587}{\+\_\+loyer}} \mbox{[}5\mbox{]} = \{0, 25, 50, 100, 200\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classActif}{Actif}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJoueur}{Joueur}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classActif_a00cef18d9977136850366ce25918e437}{\+\_\+proprietaire}} = nullptr
+\item 
+bool \mbox{\hyperlink{classActif_a8cf2d555b5f438865a88427a04b75080}{\+\_\+is\+Constructible}} =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCase}{Case}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}}
+\item 
+int \mbox{\hyperlink{classCase_af1ce512b639ce2ab7011c43870289b94}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGare_a2b1d438b01c10f61ebec5477e14f0b7e}\label{classGare_a2b1d438b01c10f61ebec5477e14f0b7e} 
+\index{Gare@{Gare}!Gare@{Gare}}
+\index{Gare@{Gare}!Gare@{Gare}}
+\doxysubsubsection{\texorpdfstring{Gare()}{Gare()}}
+{\footnotesize\ttfamily Gare\+::\+Gare (\begin{DoxyParamCaption}\item[{string}]{nom }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGare_a5e7bb5f894576b48e6b992fe71b3c1dc}\label{classGare_a5e7bb5f894576b48e6b992fe71b3c1dc} 
+\index{Gare@{Gare}!achat@{achat}}
+\index{achat@{achat}!Gare@{Gare}}
+\doxysubsubsection{\texorpdfstring{achat()}{achat()}}
+{\footnotesize\ttfamily void Gare\+::achat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{joueur,  }\item[{bool}]{enchere }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classActif_a2bd3c84315f746a34e2682ed1a910b27}{Actif}}.
+
+\Hypertarget{classGare_a0c55d0ed905a59f0aaf5a798f810747d}\label{classGare_a0c55d0ed905a59f0aaf5a798f810747d} 
+\index{Gare@{Gare}!tarif@{tarif}}
+\index{tarif@{tarif}!Gare@{Gare}}
+\doxysubsubsection{\texorpdfstring{tarif()}{tarif()}}
+{\footnotesize\ttfamily int Gare\+::tarif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{joueur }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classGare_abfadf10575003903741e037a5e1ca587}\label{classGare_abfadf10575003903741e037a5e1ca587} 
+\index{Gare@{Gare}!\_loyer@{\_loyer}}
+\index{\_loyer@{\_loyer}!Gare@{Gare}}
+\doxysubsubsection{\texorpdfstring{\_loyer}{\_loyer}}
+{\footnotesize\ttfamily const int Gare\+::\+\_\+loyer = \{0, 25, 50, 100, 200\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/h4/\+Documents/centrale/\+SMP/tp6/tp6-\/note-\/ld\+\_\+bl\+\_\+lp/monopoly/\mbox{\hyperlink{gare_8hpp}{gare.\+hpp}}\item 
+/home/h4/\+Documents/centrale/\+SMP/tp6/tp6-\/note-\/ld\+\_\+bl\+\_\+lp/monopoly/\mbox{\hyperlink{gare_8cpp}{gare.\+cpp}}\end{DoxyCompactItemize}

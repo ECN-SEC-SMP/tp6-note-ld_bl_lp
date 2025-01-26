@@ -1,0 +1,29 @@
+\doxysection{terrain.\+hpp}
+\hypertarget{terrain_8hpp_source}{}\label{terrain_8hpp_source}\index{/home/h4/Documents/centrale/SMP/tp6/tp6-\/note-\/ld\_bl\_lp/monopoly/terrain.hpp@{/home/h4/Documents/centrale/SMP/tp6/tp6-\/note-\/ld\_bl\_lp/monopoly/terrain.hpp}}
+\mbox{\hyperlink{terrain_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{actif_8hpp}{actif.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTerrain}{Terrain}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classActif}{Actif}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTerrain_aa5fcc36b72e7ef6678812bb5909528c2}{\_prixAchat}}=0;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTerrain_a01dc6939f5411e0f608d08b75d66167f}{\_nbMaison}}=0;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTerrain_acf95395a69db18b3173d6a6f8443bcbc}{\_loyer}}[5];}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classTerrain}{Terrain}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}},\textcolor{keywordtype}{int}\ PrixAchat,\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTerrain_ac5ce1b05c6a6a8db6ee42f5d849d90c0}{loyer}}[5]);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTerrain_a9c9c87c668853fffb7424489828fa2da}{achat}}(\mbox{\hyperlink{classJoueur}{Joueur}}\&\ joueur,\ \textcolor{keywordtype}{bool}\ enchere)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTerrain_a9537f126eabf67e6fcc260ab5dfb4555}{getPrixAchat}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \mbox{\hyperlink{classTerrain_ac5ce1b05c6a6a8db6ee42f5d849d90c0}{loyer}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTerrain_a7d7bf3b51d17efc2ecea0c277803f35b}{acahtImmo}}(\textcolor{keywordtype}{int}\ nbMaison);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTerrain_a216024751a9f878481f888e78be49077}{getNbMaison}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \};}
+
+\end{DoxyCode}

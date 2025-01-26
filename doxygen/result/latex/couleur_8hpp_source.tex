@@ -1,0 +1,42 @@
+\doxysection{couleur.\+hpp}
+\hypertarget{couleur_8hpp_source}{}\label{couleur_8hpp_source}\index{/home/h4/Documents/centrale/SMP/tp6/tp6-\/note-\/ld\_bl\_lp/monopoly/couleur.hpp@{/home/h4/Documents/centrale/SMP/tp6/tp6-\/note-\/ld\_bl\_lp/monopoly/couleur.hpp}}
+\mbox{\hyperlink{couleur_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{joueur_8hpp}{joueur.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{terrain_8hpp}{terrain.hpp}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCouleur}{Couleur}}\{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//0\ -\/>\ Violet\ 1\ -\/>\ Bleu\ clair,\ 2\ -\/>\ Rose,\ 3\ -\/>\ Orange,\ 4\ -\/>\ Rouge,\ 5\ -\/>\ Jaune,\ 6\ -\/>\ Vert\ clair,\ 7\ -\/>\ Bleu\ foncé,\ 8\ -\/>\ gare,\ 9\ -\/>\ SP}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{/*vector<vector<pair<Joueur*,string>>>\ map1\ =\ \{}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \{\{nullptr,"{}Boulevard\ de\ Belleville"{}\},\{nullptr,"{}Rue\ Lecourbe"{}\}\},}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \{\{nullptr,"{}Rue\ de\ Vaugirard"{}\},\{nullptr,"{}Avenue\ de\ la\ République"{}\},\{nullptr,"{}Rue\ de\ Courcelles"{}\}\},}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ \ \{\{nullptr,"{}Boulevard\ de\ la\ Villette"{}\},\{nullptr,"{}Avenue\ de\ Neuilly"{}\},\{nullptr,"{}Rue\ de\ Paradis"{}\}\},}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \{\{nullptr,"{}Avenue\ de\ Mozart"{}\},\{nullptr,"{}Boulevard\ Saint-\/Michel"{}\},\{nullptr,"{}Place\ Pigalle"{}\}\},}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ \{\{nullptr,"{}Avenue\ Matignon"{}\},\{nullptr,"{}Boulevard\ Malesherbes"{}\},\{nullptr,"{}Avenue\ Henri-\/Martin"{}\}\},}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ \{\{nullptr,"{}Faubourg\ Saint-\/Honoré"{}\},\{nullptr,"{}Place\ de\ la\ Bourse"{}\},\{nullptr,"{}Rue\ La\ Fayette"{}\}\},}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ \{\{nullptr,"{}Avenue\ de\ Breteuil"{}\},\{nullptr,"{}Avenue\ Foch"{}\},\{nullptr,"{}Boulevard\ des\ Capucines"{}\}\},}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ \{\{nullptr,"{}Champs-\/Élysées"{}\},\{nullptr,"{}Rue\ de\ la\ Paix"{}\}\},}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ \{\{nullptr,\ "{}Gare\ Montparnasse"{}\},\{nullptr,\ "{}Gare\ de\ Lyon"{}\},\{nullptr,\ "{}Gare\ Saint-\/Lazare"{}\},\{nullptr,\ "{}Gare\ du\ Nord"{}\}\},}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ \{\{nullptr,\ "{}Compagnie\ des\ Eaux"{}\},\{nullptr,\ "{}Compagnie\ de\ l'Électricité"{}\}\}}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\};*/}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ vector<Case*>\ \mbox{\hyperlink{classCouleur_ad4d4fe6d0861adcd0267e15ebe910283}{\_rue}};}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classJoueur}{Joueur}}*\ \mbox{\hyperlink{classCouleur_aff4906df509ce2e18d2556f351843f04}{\_joueur}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classCouleur}{Couleur}}(vector<Case*>\ rue);}
+\DoxyCodeLine{00032\ \ \ \ \ vector<Case*>\ \mbox{\hyperlink{classCouleur_aaeed1dd73624e7ef42750b55627f7cdc}{listeConstructible}}(\mbox{\hyperlink{classJoueur}{Joueur}}*\ joueur);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCouleur_a6decd6957127e5d62088b8ab2984edff}{miseAJour}}();}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+
+\end{DoxyCode}

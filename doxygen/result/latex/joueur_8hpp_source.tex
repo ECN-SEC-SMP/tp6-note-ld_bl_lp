@@ -1,0 +1,48 @@
+\doxysection{joueur.\+hpp}
+\hypertarget{joueur_8hpp_source}{}\label{joueur_8hpp_source}\index{/home/h4/Documents/centrale/SMP/tp6/tp6-\/note-\/ld\_bl\_lp/monopoly/joueur.hpp@{/home/h4/Documents/centrale/SMP/tp6/tp6-\/note-\/ld\_bl\_lp/monopoly/joueur.hpp}}
+\mbox{\hyperlink{joueur_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{case_8hpp}{case.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifndef\ JOUEUR\_HPP}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ JOUEUR\_HPP}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJoueur}{Joueur}}\{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classJoueur}{Joueur}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJoueur_a251a7192f61dae541f80cbff3914f208}{nom}},\ \textcolor{keywordtype}{int}\ creationSolde,\ std::vector<Case*>*\ creation\_plateau);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJoueur_ad445de3638ad860f6adfe32dad6cc5d2}{setSolde}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_a8c2a335a4551dc3a094898b13fdac013}{solde}});}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_a2241c6234e3d842788752dbf82dcc99d}{getSolde}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_ad3c09f36fccb8f82602fa6cec6c94fa2}{setPosition}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_a0289be40651cceba0cc995e03c22c852}{position}});}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCase}{Case}}*\ \mbox{\hyperlink{classJoueur_a528cac966c6cfeab47e666ce3b2735c2}{getPosition}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJoueur_a46f17b60613cdbbc970231a1525c90de}{setEnPrison}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_acef1c5bc19cdb20c738d55b6517de36a}{enPrison}});}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_aae8cc39d2a71737f1485a2527ef0bc44}{getEnPrison}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJoueur_a8e9a10d2639d61b4057586f8e7b92e9b}{setCarteSortir}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_ab123a076195dacc5cae140d1241e0a5b}{carteSortir}});}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_ac369cf69f5d23bf6921867d6945ddd0f}{getCarteSortir}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJoueur_a8667184743d7527bd7c7499452dccd83}{getNom}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJoueur_a666b0d95ea11afd27141d19f11a2fc7c}{addGare}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_ad7b265cf5d480f5315dd256a722dcb44}{getNbGare}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJoueur_a14f7de92dbcf0d1091472b53ddd6eadc}{addSP}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_a6cf7fa1318dc8890310798f5452a5905}{getNbSP}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJoueur_a251a7192f61dae541f80cbff3914f208}{nom}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_a8c2a335a4551dc3a094898b13fdac013}{solde}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_acef1c5bc19cdb20c738d55b6517de36a}{enPrison}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_ab123a076195dacc5cae140d1241e0a5b}{carteSortir}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_ad782865e5846eb1d0c837f6fbedfb9c4}{nbGare}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJoueur_a7a10ce19e8f34b1559335ce3ff8cd461}{nbSP}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::vector<Case*>*\ \mbox{\hyperlink{classJoueur_a5cfb8f146a8768985b298874d7af3c11}{plateau}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ std::vector<Case*>::iterator\ \mbox{\hyperlink{classJoueur_a0289be40651cceba0cc995e03c22c852}{position}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

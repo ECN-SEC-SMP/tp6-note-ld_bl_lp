@@ -1,0 +1,125 @@
+\doxysection{Actif Class Reference}
+\hypertarget{classActif}{}\label{classActif}\index{Actif@{Actif}}
+
+
+{\ttfamily \#include $<$actif.\+hpp$>$}
+
+
+
+Inheritance diagram for Actif\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classActif__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Actif\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classActif__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classActif_abf7239e93778dceb0fcd16d552c8003a}{Actif}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}})
+\item 
+virtual void \mbox{\hyperlink{classActif_a2bd3c84315f746a34e2682ed1a910b27}{achat}} (\mbox{\hyperlink{classJoueur}{Joueur}} \&joueur, bool enchere)=0
+\item 
+\mbox{\hyperlink{classJoueur}{Joueur}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classActif_ac47b93079b31cfceb54288e4d0ec3804}{get\+Proprio}} ()
+\item 
+void \mbox{\hyperlink{classActif_ac2ec55895cf0b503fca6ef83ddbf437b}{perte\+\_\+joueur}} (\mbox{\hyperlink{classJoueur}{Joueur}} \texorpdfstring{$\ast$}{*}joueur)
+\item 
+\mbox{\hyperlink{classActif_a5225711c17f943db6d12d1d6dfa747dc}{\texorpdfstring{$\sim$}{\string~}\+Actif}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCase}{Case}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCase_a06b17b961a5f886947cfd52061b6b06f}{Case}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}}, int \mbox{\hyperlink{classCase_af1ce512b639ce2ab7011c43870289b94}{type}})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classCase}{Case}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCase_a4f1eb37801349d45a437ab28d2635106}{set\+Nom}} (string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}})
+\begin{DoxyCompactList}\small\item\em Setter du nom de la case. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCase_a73e3d79e2ace566f899d504640161883}{get\+Nom}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du nom la classe \doxylink{classCase}{Case}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCase_a96a25a23a8de228305b52757947b1275}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJoueur}{Joueur}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classActif_a00cef18d9977136850366ce25918e437}{\+\_\+proprietaire}} = nullptr
+\item 
+bool \mbox{\hyperlink{classActif_a8cf2d555b5f438865a88427a04b75080}{\+\_\+is\+Constructible}} =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCase}{Case}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classCase_a89f24d04d3337ac40211b6b015b25fdf}{nom}}
+\item 
+int \mbox{\hyperlink{classCase_af1ce512b639ce2ab7011c43870289b94}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classActif_abf7239e93778dceb0fcd16d552c8003a}\label{classActif_abf7239e93778dceb0fcd16d552c8003a} 
+\index{Actif@{Actif}!Actif@{Actif}}
+\index{Actif@{Actif}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{Actif()}{Actif()}}
+{\footnotesize\ttfamily Actif\+::\+Actif (\begin{DoxyParamCaption}\item[{string}]{nom }\end{DoxyParamCaption})}
+
+\Hypertarget{classActif_a5225711c17f943db6d12d1d6dfa747dc}\label{classActif_a5225711c17f943db6d12d1d6dfa747dc} 
+\index{Actif@{Actif}!````~Actif@{\texorpdfstring{$\sim$}{\string~}Actif}}
+\index{````~Actif@{\texorpdfstring{$\sim$}{\string~}Actif}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Actif()}{\string~Actif()}}
+{\footnotesize\ttfamily Actif\+::\texorpdfstring{$\sim$}{\string~}\+Actif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classActif_a2bd3c84315f746a34e2682ed1a910b27}\label{classActif_a2bd3c84315f746a34e2682ed1a910b27} 
+\index{Actif@{Actif}!achat@{achat}}
+\index{achat@{achat}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{achat()}{achat()}}
+{\footnotesize\ttfamily virtual void Actif\+::achat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{joueur,  }\item[{bool}]{enchere }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classGare_a5e7bb5f894576b48e6b992fe71b3c1dc}{Gare}}, \mbox{\hyperlink{classServPublic_a3c7c53d7109e7eb350a6c92d5fad4961}{Serv\+Public}}, and \mbox{\hyperlink{classTerrain_a9c9c87c668853fffb7424489828fa2da}{Terrain}}.
+
+\Hypertarget{classActif_ac47b93079b31cfceb54288e4d0ec3804}\label{classActif_ac47b93079b31cfceb54288e4d0ec3804} 
+\index{Actif@{Actif}!getProprio@{getProprio}}
+\index{getProprio@{getProprio}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{getProprio()}{getProprio()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJoueur}{Joueur}} \texorpdfstring{$\ast$}{*} Actif\+::get\+Proprio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classActif_ac2ec55895cf0b503fca6ef83ddbf437b}\label{classActif_ac2ec55895cf0b503fca6ef83ddbf437b} 
+\index{Actif@{Actif}!perte\_joueur@{perte\_joueur}}
+\index{perte\_joueur@{perte\_joueur}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{perte\_joueur()}{perte\_joueur()}}
+{\footnotesize\ttfamily void Actif\+::perte\+\_\+joueur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \texorpdfstring{$\ast$}{*}}]{joueur }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classActif_a8cf2d555b5f438865a88427a04b75080}\label{classActif_a8cf2d555b5f438865a88427a04b75080} 
+\index{Actif@{Actif}!\_isConstructible@{\_isConstructible}}
+\index{\_isConstructible@{\_isConstructible}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{\_isConstructible}{\_isConstructible}}
+{\footnotesize\ttfamily bool Actif\+::\+\_\+is\+Constructible =0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classActif_a00cef18d9977136850366ce25918e437}\label{classActif_a00cef18d9977136850366ce25918e437} 
+\index{Actif@{Actif}!\_proprietaire@{\_proprietaire}}
+\index{\_proprietaire@{\_proprietaire}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{\_proprietaire}{\_proprietaire}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJoueur}{Joueur}}\texorpdfstring{$\ast$}{*} Actif\+::\+\_\+proprietaire = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/h4/\+Documents/centrale/\+SMP/tp6/tp6-\/note-\/ld\+\_\+bl\+\_\+lp/monopoly/\mbox{\hyperlink{actif_8hpp}{actif.\+hpp}}\item 
+/home/h4/\+Documents/centrale/\+SMP/tp6/tp6-\/note-\/ld\+\_\+bl\+\_\+lp/monopoly/\mbox{\hyperlink{actif_8cpp}{actif.\+cpp}}\end{DoxyCompactItemize}
