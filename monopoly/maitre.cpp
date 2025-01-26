@@ -44,10 +44,10 @@ void Maitre::passer_tour() {
 
             switch (type_case)
             { 
-                case 0:
+                case 0: //case non définie
                     std::cout <<"ERROR! une case à un type non initialisé! (cette case ne fera rien)" << std::endl;
                     break;
-                case 1:
+                case 1: //case terrain
                     case_terrain = static_cast<Terrain*>(case_temp); //pas de polymorphisme (oups) donc static cast
                     case_terrain_activation(case_terrain);
                     break;
@@ -151,7 +151,7 @@ void Maitre::set_joueur_en_prison(Joueur &joueur)
 }
 
 // Gère le mécanisme d'enchère
-void Maitre::enchere(Case &tile) {
+void Maitre::enchere(Terrain &tile) {
     int maxEnchere = 0;
     int inputJoueur = 0;
     
@@ -195,7 +195,7 @@ void Maitre::enchere(Case &tile) {
     if(Gagnant != nullptr)
     {
         Gagnant->setSolde(-maxEnchere);
-        //case.setProprio(Gagnant);   //TODO: update with actual function
+        tile.achat(*Gagnant, true);
 
         std::cout << "Gagnant de l'enchère: " << Gagnant->getNom() << std::endl;
     }else
@@ -251,18 +251,42 @@ void Maitre::achat_immobillier()
                         std::cin >> user_input_buy;
                         if(user_input_buy=='O')
                         {
-                            //case_terrain->acahtImmo(1);
+                            case_terrain->acahtImmo(1);
                             index_joueur_actif->setSolde(-200);
                         }
                     }
                 }
-            }
+            }           //Amélioration possible: rajouter une ou deux fonctions pour rendre plus propre cet escallier de boucles & if
         }
     }
 }
 // Gère les actions liées aux cases de type terrain
 void Maitre::case_terrain_activation(Terrain* case_terrain) {
-
+    Joueur* proprio = case_terrain->getProprio();
+    if(proprio ==nullptr) //la case n'as pas de propriétaure, donc achat / mise au enchères
+    {
+        std::cout << "voulez vous acheter ce terrain pour " << case_terrain->getPrixAchat() << " monos? O/N" << std::endl;
+        std::cout << "Vous avez" << index_joueur_actif->getSolde() << " monos." << std::endl;
+        char user_input = 'N';
+        std::cin>>user_input;
+        if(user_input == 'O')
+        {
+            case_terrain->achat(*index_joueur_actif,false);
+        }else
+        {
+            enchere(*case_terrain);
+        }
+    }else if(proprio->getNom() == index_joueur_actif->getNom())
+    {
+        std::cout << "Vous êtes chez vous sur la case " << proprio->getNom() << std::endl;
+    }else
+    {
+        int loyer = case_terrain->loyer() ;
+        std::cout << "vous êtes sur la case de " << proprio->getNom() << "vous payez un loyer de: " << loyer << " monos." << std::endl;
+        proprio->setSolde(loyer);
+        index_joueur_actif->setSolde(-loyer);
+        std::cout << "il vous reste :" << index_joueur_actif->getSolde() << " monos." << std::endl;
+    }
 }
 
 // Gère les actions liées aux cases d'action

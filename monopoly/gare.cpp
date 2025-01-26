@@ -10,7 +10,7 @@ int Gare::tarif(Joueur& joueur){
 }
 
 
-void Gare::achat(Joueur &joueur){
+void Gare::achat(Joueur &joueur, bool enchere){
     _proprietaire=&joueur;
-    joueur.setSolde(-200);
+    if(!enchere) joueur.setSolde(-200);
 }

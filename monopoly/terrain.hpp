@@ -14,7 +14,8 @@ protected:
 public:
 
     Terrain(string nom,int PrixAchat,int loyer[5]);
-    void achat(Joueur& joueur) override;
+    void achat(Joueur& joueur, bool enchere) override;
+    int getPrixAchat();
     int  loyer();
     void acahtImmo(int nbMaison);
     int getNbMaison();

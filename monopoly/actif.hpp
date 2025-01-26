@@ -13,7 +13,8 @@ protected:
 
 public:
     Actif(string nom);
-    virtual void achat(Joueur& joueur) =0; 
+    virtual void achat(Joueur& joueur, bool enchere) =0; 
+    Joueur *getProprio();
     ~Actif(){ delete _proprietaire;};
 };
 

@@ -30,7 +30,7 @@ private:
 	int test_prison(Joueur &joueur);
 	void set_joueur_en_prison(Joueur &joueur);
 	// Gère le mécanisme d'enchère
-	void enchere(Case &tile);
+	void enchere(Terrain &tile);
 
 	void achat_immobillier();
 	// Gère les actions liées aux cases de type terrain

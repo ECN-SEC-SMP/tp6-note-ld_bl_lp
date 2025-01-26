@@ -10,7 +10,7 @@ int ServPublic::tarif(Joueur &joueur, int de1, int de2){
 }
 
 
-void ServPublic::achat(Joueur &joueur){
+void ServPublic::achat(Joueur &joueur, bool enchere){
     _proprietaire=&joueur;
-    joueur.setSolde(-150);
+    if(!enchere) joueur.setSolde(-150);
 }

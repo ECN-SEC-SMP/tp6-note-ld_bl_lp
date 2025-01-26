@@ -7,9 +7,13 @@ Terrain::Terrain(string nom,int PrixAchat,int loyer[5]): Actif(nom){
     }
 }
 
-void Terrain::achat(Joueur &joueur){
+void Terrain::achat(Joueur &joueur, bool enchere){
     _proprietaire=&joueur;
-    joueur.setSolde(-_prixAchat);
+    if(!enchere) joueur.setSolde(-_prixAchat);
+}
+int Terrain::getPrixAchat()
+{
+    return _prixAchat;
 }
 
 int Terrain::loyer(){
