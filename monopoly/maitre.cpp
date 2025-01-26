@@ -76,7 +76,7 @@ void Maitre::passer_tour() {
 
 void Maitre::creation_plateau()
 {
-
+    
 }
 
 void Maitre::creation_joueurs(int nb_J)
@@ -314,6 +314,26 @@ void Maitre::verif_joueur() {
 std::vector<Case*> Maitre::liste_case_constructibles()
 {
     std::vector<Case*> vecteur_cases_constructibles ;
+    std::vector<Case*> combinedCases;
+    Joueur * joeur_actif = &(*index_joueur_actif);
+    std::vector<Couleur>::iterator iterator_couleur= liste_couleurs.begin();
+    while (iterator_couleur!= liste_couleurs.end() ) {
+        std::vector<Case*> constructibleCases = iterator_couleur->listeConstructible(joeur_actif);
+        vecteur_cases_constructibles.insert(vecteur_cases_constructibles.end(),
+                            std::make_move_iterator(constructibleCases.begin()),
+                            std::make_move_iterator(constructibleCases.end()));
+        iterator_couleur++;
+    }
 
     return vecteur_cases_constructibles;
+}
+
+void Maitre::test_proprio_couleurs()
+{
+    std::vector<Couleur>::iterator iterator_couleur= liste_couleurs.begin();
+    while (iterator_couleur!= liste_couleurs.end() ) 
+    {
+        iterator_couleur->miseAJour();
+        iterator_couleur++;
+    }
 }

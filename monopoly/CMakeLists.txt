@@ -25,6 +25,7 @@ set(SOURCES
     actif.cpp
     gare.cpp
     servPublic.cpp 
+    couleur.cpp
 )
 
 # Créer l'exécutable
