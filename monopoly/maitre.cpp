@@ -71,7 +71,7 @@ void Maitre::passer_tour() {
     //demande pour l'achat immobillier sur des terrains possédés 
     achat_immobillier();
 
-
+    verif_joueur();//vérifie que le joueur n'as pas fait banqueroute, sinon le supprime de la liste
 }
 
 void Maitre::creation_plateau()
@@ -296,7 +296,20 @@ void Maitre::case_action_activation(Action* case_action) {
 
 // Vérifie les informations ou les états d'un joueur
 void Maitre::verif_joueur() {
-    
+    if(index_joueur_actif->getSolde() < 0) //oups plus d'argent
+    {
+        std::cout << "Le joueur " << index_joueur_actif->getNom() << " à fait banqueroute!" << std::endl;
+        index_joueur_actif = joueurs.erase(index_joueur_actif);
+        //TODO: rajouter fonction de suppression du propriétaire lors de sa perte (à travers la fonction perte_joueur)
+    }else
+    {
+        index_joueur_actif++;
+    }
+    if(index_joueur_actif == joueurs.end())
+    {
+        index_joueur_actif = joueurs.begin();
+    }
+
 }
 std::vector<Case*> Maitre::liste_case_constructibles()
 {

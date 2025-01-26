@@ -15,6 +15,7 @@ public:
     Actif(string nom);
     virtual void achat(Joueur& joueur, bool enchere) =0; 
     Joueur *getProprio();
+    void perte_joueur(Joueur *joueur);
     ~Actif(){ delete _proprietaire;};
 };
 
