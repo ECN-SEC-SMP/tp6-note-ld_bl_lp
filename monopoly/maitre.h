@@ -9,6 +9,7 @@
 #include "case.hpp"
 #include "terrain.hpp"
 #include "action.hpp"
+#include "couleur.hpp"
 //#include "GestionnaireCouleur.h" 
 #include <iostream>
 
@@ -27,10 +28,11 @@ private:
 	int lancer_des(); //renvoie le résultat des deux dés ou -1 pour un double
 	// Vérifie si un joueur est en prison
 	int test_prison(Joueur &joueur);
-
+	void set_joueur_en_prison(Joueur &joueur);
 	// Gère le mécanisme d'enchère
 	void enchere(Case &tile);
 
+	void achat_immobillier();
 	// Gère les actions liées aux cases de type terrain
 	void case_terrain_activation(Terrain* case_terrain);
 
@@ -40,10 +42,13 @@ private:
 	// Vérifie les informations ou les états d'un joueur 
 	void verif_joueur();
 
+	std::vector<Case*> liste_case_constructibles();
+	void test_proprio_couleurs();
+	
 	// Liste des joueurs
 	std::vector<Joueur> joueurs;
 	std::vector<Case*> plateau_jeu;
-
+	std::vector<Couleur> liste_couleurs;
 	// Index du joueur actif
 	std::vector<Joueur>::iterator index_joueur_actif;
 	int nb_Joeurs;

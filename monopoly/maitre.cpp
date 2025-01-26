@@ -23,36 +23,55 @@ void Maitre::passer_tour() {
 
 
     int joueur_en_prison = test_prison(joueur_actif);
-    if(joueur_en_prison ==0)
+    if(joueur_en_prison ==0) // le joueur n'est pas en prison
     {
         std::cout << "Au tour de " << joueur_actif.getNom() << " ! Lance les dés!" <<std::endl;  
         int resultat = lancer_des();
+        if(resultat == -1)
+        {
+            std::cout << "second lancé pour éviter la prison!" << std::endl;
+            resultat = lancer_des();
+        }
+        if(resultat != -1) // le joueur ne part pas en prison
+        {
+            int tour_complet = joueur_actif.setPosition(resultat);
+            if(tour_complet == 1) joueur_actif.setSolde(200); // le joueur à passé la case départ, il est crédité de 200 monos
+            Case * case_temp = joueur_actif.getPosition();
+            int type_case = case_temp->getType();
 
-        Case * case_temp = joueur_actif.getPosition();
-        int type_case = case_temp->getType();
+            Terrain * case_terrain; //le compilateur ne veut pas de définition dans un case
+            Action * case_action;
 
-        Terrain * case_terrain; //le compilateur ne veut pas de définition dans un case
-        Action * case_action;
-
-        switch (type_case)
-        { 
-            case 0:
-                std::cout <<"ERROR! une case à un type non initialisé! (cette case ne fera rien)" << std::endl;
-                break;
-            case 1:
-                case_terrain = static_cast<Terrain*>(case_temp); //pas de polymorphisme (oups) donc static cast
-                case_terrain_activation(case_terrain);
-                break;
-            case 2:
-                case_action = static_cast<Action*>(case_temp); //pas de polymorphisme (oups) donc static cast
-                case_action_activation(case_action);
-                break;
-            default:
-                std::cout <<"ERROR! une case à un type non connu! (cette case ne fera rien) numéro de type: " << type_case << std::endl;
-                break;
+            switch (type_case)
+            { 
+                case 0:
+                    std::cout <<"ERROR! une case à un type non initialisé! (cette case ne fera rien)" << std::endl;
+                    break;
+                case 1:
+                    case_terrain = static_cast<Terrain*>(case_temp); //pas de polymorphisme (oups) donc static cast
+                    case_terrain_activation(case_terrain);
+                    break;
+                case 2:
+                    case_action = static_cast<Action*>(case_temp); //pas de polymorphisme (oups) donc static cast
+                    case_action_activation(case_action);
+                    break;
+                case 4:
+                    std::cout << "Oups! vous êtes tombés sur une case \"aller en prison!\"" << std::endl;
+                    set_joueur_en_prison(joueur_actif);
+                    break;
+                default:
+                    std::cout <<"ERROR! une case à un type non connu! (cette case ne fera rien) numéro de type: " << type_case << std::endl;
+                    break;
+            }
+        }else
+        {
+            set_joueur_en_prison(joueur_actif);
         }
     }
-    // Appel des autres fonctions nécessaires pour gérer un tour complet
+    //demande pour l'achat immobillier sur des terrains possédés 
+    achat_immobillier();
+
+
 }
 
 void Maitre::creation_plateau()
@@ -121,6 +140,16 @@ int Maitre::test_prison(Joueur &joueur) {
     return nb_tour_prison;
 }
 
+void Maitre::set_joueur_en_prison(Joueur &joueur)
+{   
+    std::cout << "Pas de chance! Vous allez en prison." << std::endl;
+    while(joueur.getPosition()->getType() != 3) //loop tand que le  joueur n'est pas sur la case prison
+    {
+        joueur.setPosition(1);
+    }
+    joueur.setEnPrison(3); // met le joueur en prison pour 3 tours
+}
+
 // Gère le mécanisme d'enchère
 void Maitre::enchere(Case &tile) {
     int maxEnchere = 0;
@@ -176,6 +205,61 @@ void Maitre::enchere(Case &tile) {
 
 }
 
+
+void Maitre::achat_immobillier()
+{
+    std::vector<Case*> vecteur_cases_constructibles = liste_case_constructibles();
+
+    if(vecteur_cases_constructibles.empty())
+    {
+        std::cout << "Vous n'avez aucune case constructible!" << std::endl;
+    }else
+    {
+        int user_input = 0;
+        while(user_input != -1)
+        {
+            std::cout << "Liste de vos cases constructibles:" << std::endl;
+            int i=0;
+            std::vector<Case*>::iterator index_cases_constructibles = vecteur_cases_constructibles.begin();
+            while(index_cases_constructibles != vecteur_cases_constructibles.end())
+            {
+                Case * case_actuelle = *index_cases_constructibles;
+                std::cout << i << " : " << case_actuelle->getNom() << std::endl;
+                i++;
+                index_cases_constructibles ++;
+            }
+            std::cout << "Sur quelles cases voulez-vous construire? (-1 pour ne rien faire)" <<std::endl;
+            std::cin >>user_input;
+            if(user_input >= 0 && user_input+1 < vecteur_cases_constructibles.size())
+            {
+                Case * case_choisie = vecteur_cases_constructibles[user_input];
+                if(case_choisie->getType() != 1)
+                {
+                    std::cout << "cette case n'est pas constructible!" << std::endl; 
+                }else
+                {
+                    Terrain * case_terrain = static_cast<Terrain*>(case_choisie);
+                    int nb_maisons_construites = case_terrain->getNbMaison();
+                    if( nb_maisons_construites == 5)
+                    {
+                        std::cout << "vous avez déjà tout acheté sur cette case!" << std::endl;
+                    }else
+                    {
+                        std::cout << "Voulez vous acheter un nouveau batiment sur " << case_terrain->getNom() << " pour 200 Monos? O/N"  << std::endl;
+                        std::cout << "il vous reste " << index_joueur_actif->getSolde() << " monos";
+                        char user_input_buy = 'N';
+                        std::cin >> user_input_buy;
+                        if(user_input_buy=='O')
+                        {
+                            //case_terrain->acahtImmo(1);
+                            index_joueur_actif->setSolde(-200);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 // Gère les actions liées aux cases de type terrain
 void Maitre::case_terrain_activation(Terrain* case_terrain) {
 
@@ -183,10 +267,16 @@ void Maitre::case_terrain_activation(Terrain* case_terrain) {
 
 // Gère les actions liées aux cases d'action
 void Maitre::case_action_activation(Action* case_action) {
-    
+    case_action->activation(*index_joueur_actif);
 }
 
 // Vérifie les informations ou les états d'un joueur
 void Maitre::verif_joueur() {
     
+}
+std::vector<Case*> Maitre::liste_case_constructibles()
+{
+    std::vector<Case*> vecteur_cases_constructibles ;
+
+    return vecteur_cases_constructibles;
 }
