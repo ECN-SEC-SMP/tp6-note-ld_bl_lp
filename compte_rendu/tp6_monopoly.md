@@ -39,6 +39,8 @@
   - [5. Conclusion](#5-conclusion)
 
 ---
+#IMPORTANT
+dû à des bon gros problèmes de conflit de merge, je n'arrive pas à faire une fusion propre de la branche main avec la branche maitre. La branche maitre contient jusqu'à présent le plus de fonctionnalités (enfin, celles du maitre, qui gère la logique de la partie). Veuillez donc utiliser le code de cette branche, merci. Le code du main est sensé être plus propre/ cohérent, mais manque donc les fonctionnalités qui permettent de jouer.
 
 ## 1. Préambule - Création du repository Git
 Pour réaliser ce TP, commencez par créer un repository Git en suivant les consignes suivantes :
