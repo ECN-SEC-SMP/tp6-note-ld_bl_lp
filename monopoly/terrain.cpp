@@ -21,6 +21,7 @@ int Terrain::loyer(){
 void Terrain::acahtImmo(int nbMaison){
     if(_isConstructible==1){
     _nbMaison += nbMaison;
+    if(_nbMaison >4){ _nbMaison =4;}
     }
 }
 
