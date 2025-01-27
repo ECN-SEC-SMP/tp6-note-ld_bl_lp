@@ -1,6 +1,6 @@
 #include "servPublic.hpp"
 
-ServPublic::ServPublic(string nom): Actif(nom){}
+ServPublic::ServPublic(string nom): Actif(nom,5){}
 
 int ServPublic::tarif(Joueur &joueur, int de1, int de2){
     int resultatDes = de1 + de2; // Somme des dés

@@ -14,5 +14,9 @@
 #include <iostream>
 #include <random>
 
-SimpleVisite::SimpleVisite(const string& nom) : Action(nom) {}
-
+SimpleVisite::SimpleVisite(const string& nom) : Action(nom,2) {}
+SimpleVisite::SimpleVisite(const string& nom, bool prison) : Action(nom,3) {}
+void SimpleVisite::activation(Joueur& joueur)
+{
+    int nothing = 0;
+}

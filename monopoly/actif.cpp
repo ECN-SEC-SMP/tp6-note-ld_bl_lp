@@ -1,6 +1,6 @@
 #include "actif.hpp"
 
-Actif::Actif(string nom) : Case(nom,1) {}
+Actif::Actif(string nom,int numType) : Case(nom,numType) {}
 Joueur * Actif::getProprio()
 {
     return _proprietaire;

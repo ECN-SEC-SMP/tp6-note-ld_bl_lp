@@ -18,7 +18,7 @@
 
 class Action : public Case {
 public:
-    Action(const string& nom);
+    Action(const string& nom,int numType);
     virtual void activation(Joueur& joueur) =0; 
 
 };

@@ -13,7 +13,7 @@ protected:
 
 public:
 
-    Terrain(string nom,int PrixAchat,int loyer[5]);
+    Terrain(string nom,int PrixAchat,std::vector<int> loyer);
     void achat(Joueur& joueur, bool enchere) override;
     int getPrixAchat();
     int  loyer();

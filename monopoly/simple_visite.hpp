@@ -18,6 +18,8 @@
 class SimpleVisite : public Action {
 public:
     SimpleVisite(const string& nom);
+    SimpleVisite(const string& nom, bool prison);
+    void activation(Joueur& joueur);
     
 };
 

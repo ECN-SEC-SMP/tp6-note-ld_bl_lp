@@ -18,7 +18,7 @@
  * 
  * @param nom Nom de la case
  */
-AllerEnPrison::AllerEnPrison(const string& nom) : Action(nom) {}
+AllerEnPrison::AllerEnPrison(const string& nom) : Action(nom,4) {}
 
 /**
  * @brief positionne le joueur en prison 

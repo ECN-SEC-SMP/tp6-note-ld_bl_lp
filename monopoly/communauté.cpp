@@ -20,7 +20,7 @@
  * @param nom Nom de la case
  */
 
-Communauté::Communauté(const string& nom) : Action(nom) {}
+Communauté::Communauté(const string& nom) : Action(nom,2) {}
 
 
 /**

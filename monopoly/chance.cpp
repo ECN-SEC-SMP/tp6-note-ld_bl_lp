@@ -20,7 +20,7 @@
  * @param nom Nom de la case
  */
 
-Chance::Chance(const string& nom) : Action(nom) {}
+Chance::Chance(const string& nom) : Action(nom,2) {}
 
 
 /**

@@ -12,7 +12,7 @@ protected:
     bool    _isConstructible=0;
 
 public:
-    Actif(string nom);
+    Actif(string nom,int numType);
     virtual void achat(Joueur& joueur, bool enchere) =0; 
     Joueur *getProprio();
     void perte_joueur(Joueur *joueur);

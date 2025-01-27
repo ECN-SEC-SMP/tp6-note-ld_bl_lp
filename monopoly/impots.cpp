@@ -20,7 +20,7 @@
  * @param nom Nom de la case
  */
 
-Impots::Impots(const string& nom) : Action(nom) {}
+Impots::Impots(const string& nom) : Action(nom,2) {}
 
 
 /**

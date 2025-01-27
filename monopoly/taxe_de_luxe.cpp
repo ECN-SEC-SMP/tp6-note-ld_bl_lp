@@ -18,7 +18,7 @@
  * @param nom Nom de la case
  */
 
-TaxeDeLuxe::TaxeDeLuxe(const string& nom) : Action(nom) {}
+TaxeDeLuxe::TaxeDeLuxe(const string& nom) : Action(nom,2) {}
 
 
 /**

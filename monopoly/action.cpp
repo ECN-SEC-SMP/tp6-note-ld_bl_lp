@@ -16,4 +16,4 @@
  * @param nom Nom de la case
  */
 
-Action::Action(const string& nom) : Case(nom , 0 ) {}
+Action::Action(const string& nom,int numType) : Case(nom , numType ) {}
