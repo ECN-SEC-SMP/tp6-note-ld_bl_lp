@@ -12,7 +12,8 @@ vector<Case*> Couleur::listeConstructible(Joueur* joueur){
     }
     else
     {
-        return vector<Case*>{nullptr};
+        vector<Case*> rien;
+        return rien;
     }
 }
 
