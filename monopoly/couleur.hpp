@@ -24,12 +24,12 @@ protected:
     {{nullptr, "Compagnie des Eaux"},{nullptr, "Compagnie de l'Électricité"}}
 };*/
 
-    vector<Case*> _rue;
+    vector<Actif*> _rue;
     Joueur* _joueur;
 
 public:
-    Couleur(vector<Case*> rue);
-    vector<Case*> listeConstructible(Joueur* joueur);
+    Couleur(vector<Actif*> rue);
+    vector<Actif*> listeConstructible(Joueur* joueur);
     void miseAJour();
     
 };
