@@ -18,23 +18,39 @@
     - [2.7.🏆 Fin du jeu](#27-fin-du-jeu)
   - [3. Travail à faire](#3-travail-à-faire)
     - [3.1. Spécifications](#31-spécifications)
-    - [3.2. Conception (Diagrammes)](#32-conception-diagrammes)
-    - [3.3. Algorithmes](#33-algorithmes)
-    - [3.4. Jeux d’essais](#34-jeux-dessais)
-      - [3.4.1. Classe Case](#341-classe-case)
+      - [Gestion des groupes de cartes](#gestion-des-groupes-de-cartes)
+      - [Conception globale](#conception-globale)
+    - [3.2. Conception](#32-conception)
+      - [Classe Joueur](#classe-joueur)
+      - [Classe Case](#classe-case)
+      - [Classe Couleur](#classe-couleur)
+      - [Classe MJ](#classe-mj)
+    - [3.3. Jeux d’essais](#33-jeux-dessais)
+      - [3.3.1. Classe Case](#331-classe-case)
         - [Description](#description)
         - [Exemples de tests](#exemples-de-tests)
-  - [4. Conclusion](#4-conclusion)
+  - [4. Amélioration](#4-amélioration)
+    - [Classe monétaire](#classe-monétaire)
+    - [Le polymorphisme](#le-polymorphisme)
+  - [5. Conclusion](#5-conclusion)
 
 ---
 
 ## 1. Préambule - Création du repository Git
 Pour réaliser ce TP, commencez par créer un repository Git en suivant les consignes suivantes :
 - Donnez à votre groupe un nom de la forme **NOM1-NOM2-NOM3-NOM4**.
-- Ajoutez un fichier `README.md` listant les membres de l’équipe.
 - Partagez vos livrables : code, diagrammes, description des choix de conception, algorithmes et jeux d'essais.
 
 ## 2. Règles du jeu
+
+<div style="position: relative; text-align: center; color: white;">
+
+![Plateau de Monopoly](img/Plateau.png)
+
+<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px;">
+Plateau de Monopoly
+</div>
+
 ### 2.1. Tour de jeu
 Chaque joueur joue à son tour dans le sens des aiguilles d’une montre :
    - Lancez les **deux dés** et avancez votre pion du nombre indiqué.
@@ -110,25 +126,78 @@ Chaque joueur joue à son tour dans le sens des aiguilles d’une montre :
 
 ## 3. Travail à faire
 ### 3.1. Spécifications
-Décrivez les fonctionnalités attendues et les règles du jeu implémentées. Listez les classes et leurs relations.
+Pour répondre aux attentes du TP, nous avons décidé de faire une architecture où seule la classe `MJ` avait une réelle réflexion. Les autres classes ont pour rôle de :
+- **stocker** les informations nécessaires,
+- **mettre à jour** ces informations,
+- **communiquer** leurs données avec les autres classes.
 
-### 3.2. Conception (Diagrammes)
-Réalisez des diagrammes UML pour modéliser le jeu :
-- Diagrammes de classes pour représenter les joueurs, le plateau, et les cartes.
-- Diagrammes de séquence pour illustrer les interactions principales.
+#### Gestion des groupes de cartes
+Pour stocker les groupes de cartes, nous avons créé une classe `Couleurs`. Cette classe stocke les informations relatives à un groupe de couleur. Lorsqu’un groupe possède sur toutes les cases le même propriétaire, les cases deviennent **constructibles**.
 
-### 3.3. Algorithmes
-Expliquez les choix algorithmiques pour la gestion des actions de jeu :
-- Lancer les dés.
-- Gérer l’achat, les enchères, ou la construction.
-- Implémenter les conditions de victoire.
+#### Conception globale
+Nous obtenons alors une conception qui suit le diagramme de classe suivant :
+<div style="position: relative; text-align: center; color: white;">
 
-### 3.4. Jeux d’essais
-Fournissez des exemples de tests :
-- Scénarios simples : Achat de propriété, paiement de loyer.
-- Scénarios complexes : Construction d’hôtels, faillite d’un joueur.
+![Diagramme de classe](img/diagClasse)
 
-#### 3.4.1. Classe Case 
+<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px;">
+Diagramme de classe
+</div>
+
+### 3.2. Conception 
+
+#### Classe Joueur
+Le but de cette classe est de créer les profils des joueurs du Monopoly, ils doivent etre capable de stocker leurs informations:
+- Argent,
+- position,
+- si ils sont en prison,
+- leurs cartes spéciales (communauté, chance, gare, service publique).
+Elle est capable de transmettre ses informations et de les mettres à jours graces aux méthodes qui conviennent.
+![Classe Joueur](img/joueur.png)
+
+#### Classe Case
+Cette classe est une classe qui possède beaucoup de spécificités différentes, pour cela nous avons utilisé l'héritage, nous avons d'abord séparé en deux types de classes filles:
+- les actions
+![Classe Action](img/action.png)
+- les actifs
+![Classe Actif](img/actif.png)
+Cette séparation a pour but de séparer les classes qui agissent uniquement sur le joueur et les cases ou les intéractions vont dans les 2 sens (par exemple: achat de la carte, payement du loyer). 
+Une fois cette séparation effectué nous avons créés de nouvelles classes filles correspondants a chaque types de cases différentes, voici les classes filles de Action:
+- Chance
+![Classe Chance](img/caseChance.png)
+- Communauté
+![Classe Communauté](img/communaute.png)
+- AllerPrison
+![Classe AllerPrison](img/allerEnPrison.png)
+- Impots
+![Classe Impots](img/impots.png)
+- Taxe De Luxe
+![Classe TaxeDeLuxe](img/taxeDeLuxe.png)
+Et les classes filles de Actif:
+- Gare
+![Classe Gare](img/gare.png)
+- ServPublic
+![Classe ServPublic](img/servPublique.png)
+- Terrain
+![Classe Terrain](img/terrain.png)
+
+Une des spécificités de cette conception est que les classes `Actif` et `Action` sont des classes virtuelles pures. Elles possèdent toutes les deux une méthode virtuelle pure.  
+Celle-ci est utilisée dans les classes filles, permettant d'avoir une déclaration commune mais une définition qui s'ajuste aux besoins de chaque classe.  
+Du côté des classes filles de la classe `Actif`, on retrouve également des tableaux qui, selon les besoins, sont instanciés en static. 
+
+#### Classe Couleur
+Pour ce qui est de la classe `Couleur`, la conception a été plutôt laborieuse. Nous avons d'abord eu l'idée d'une classe qui, finalement, s'est plutôt rapprochée d'un objet unique.  
+Nous avons donc modifié la conception pour que la classe `Couleur` soit plus cohérente dans le projet. Le Maître du Jeu possède le vecteur de couleurs, et chaque couleur possède son propre vecteur de cases.  
+L'objectif de cette classe est de permettre de savoir si la couleur est constructible ou non. À chaque achat, une mise à jour est effectuée pour vérifier le propriétaire des autres cases de la même couleur.  
+Un joueur peut également obtenir la liste des différentes cases constructibles.
+```
+
+Tu peux copier et coller ce texte dans ton fichier `.md`.
+
+#### Classe MJ
+
+### 3.3. Jeux d’essais
+#### 3.3.1. Classe Case 
 
 ##### Description
 Réalisation des jeux d'essaies sur la classe Case 
@@ -161,9 +230,16 @@ Réalisation des jeux d'essaies sur la classe Case
    ![résultat](img/case_com.png)
 
 
+## 4. Amélioration
+### Classe monétaire
+Nous aurions pu créé une classe monétaire qui remplacerait toutes les classes donnant ou retirant de l'argent au joueur grâce aux méthodes virtuelles de la classe `Action`. Lors de la réalisation, nous avons différencié chaque case (taxe de luxe, impôts, ...).  
+Le fait de réaliser cette classe aurait facilité l'utilisation et évité des confusions. De plus, les cases sans aucune activité (case départ, simple visite, ...) auraient pu être créées via cette classe en mettant la transaction à 0.
 
+### Le polymorphisme
+L'utilisation du polymorphisme aurait pu être très utile dans la classe `Case`, notamment dans le rôle du Maître du Jeu. Lorsque le plateau est créé, on indique que le tableau est de type `Case`. Or, lors de l'instanciation des cases, il existe plusieurs types de cases différents.  
+Pour résoudre ce problème, nous avons utilisé du `static_cast`. L'utilisation du polymorphisme ici aurait grandement facilité l'implémentation du plateau.
 
-## 4. Conclusion
+## 5. Conclusion
 Ce projet permet d’appliquer les concepts d’objet, d’héritage, et de gestion de projet en équipe. Le rendu final comprend :
 - Code commenté.
 - Diagrammes UML.
