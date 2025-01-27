@@ -1,6 +1,7 @@
 #include <iostream>
 #include "chance.hpp"
 #include "joueur.hpp"
+#include "maitre.h"
 #include "communauté.hpp"
 #include"taxe_de_luxe.hpp"
 #include"impots.hpp"
@@ -40,6 +41,12 @@ int main() {
     std::cout << "position :       " << joueur1.getPosition()->getNom() << std::endl;
     std::cout << "Nom : 1 Solde :  " << joueur1.getSolde() << " monos" << std::endl;
     delete plateau_test;
+
+    Maitre maitreJeu(3); //création d'un jeu avec 3 joueurs
+    while(1)
+    {
+        maitreJeu.passer_tour();
+    }
 
 
     return 0;

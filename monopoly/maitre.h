@@ -10,6 +10,14 @@
 #include "terrain.hpp"
 #include "action.hpp"
 #include "couleur.hpp"
+#include "simple_visite.hpp"
+#include "gare.hpp"
+#include "communauté.hpp"
+#include "impots.hpp"
+#include "chance.hpp"
+#include "servPublic.hpp"
+#include "aller_en_prison.hpp"
+#include "taxe_de_luxe.hpp"
 //#include "GestionnaireCouleur.h" 
 #include <iostream>
 
@@ -23,6 +31,9 @@ public:
 
 private:
 	const int mono_base =200;
+
+	int generatePrixAchat();
+	std::vector<int> generateLoyer(int prixAchat); 
 	void creation_plateau();
 	void creation_joueurs(int nb_J);
 	int lancer_des(); //renvoie le résultat des deux dés ou -1 pour un double

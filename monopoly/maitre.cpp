@@ -51,11 +51,11 @@ void Maitre::passer_tour() {
                     case_terrain = static_cast<Terrain*>(case_temp); //pas de polymorphisme (oups) donc static cast
                     case_terrain_activation(case_terrain);
                     break;
-                case 2:
+                case 2: //case action
                     case_action = static_cast<Action*>(case_temp); //pas de polymorphisme (oups) donc static cast
                     case_action_activation(case_action);
                     break;
-                case 4:
+                case 4: //case aller en prison
                     std::cout << "Oups! vous êtes tombés sur une case \"aller en prison!\"" << std::endl;
                     set_joueur_en_prison(joueur_actif);
                     break;
@@ -65,18 +65,174 @@ void Maitre::passer_tour() {
             }
         }else
         {
-            set_joueur_en_prison(joueur_actif);
+            set_joueur_en_prison(joueur_actif); //boucle infinie, n'arrive pas à trouver la case
         }
     }
     //demande pour l'achat immobillier sur des terrains possédés 
-    achat_immobillier();
+    achat_immobillier();      // fait un bon gros seg_fault dont je n'arrive pas à trouver la raison
 
     verif_joueur();//vérifie que le joueur n'as pas fait banqueroute, sinon le supprime de la liste
+}
+// Générer un prix d'achat aléatoire entre 100 et 500 par centaine
+int Maitre::generatePrixAchat() { return (std::rand() % 5 + 1) * 100; };
+
+ // Générer les loyers en fonction du prix d'achat
+std::vector<int> Maitre::generateLoyer(int prixAchat) {
+    std::vector<int> loyer(5);
+    for (int i = 0; i < 5; i++) {
+        loyer[i] = prixAchat * (i + 1); // Exemple de calcul
+    }
+    return loyer;
 }
 
 void Maitre::creation_plateau()
 {
     
+    Case * case_courante0;
+    Case * case_courante1;
+    Case * case_courante2;
+    Case * case_courante3;
+    std::vector<Case*> temp_rue;
+
+
+    case_courante0 = new SimpleVisite("case départ"); //case 1
+    plateau_jeu.emplace_back(case_courante0);
+
+
+    case_courante1 = new Terrain("\033[35mBd de Belleville\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 2
+    plateau_jeu.emplace_back(case_courante1);
+
+    case_courante0 = new Communauté("Caisse de Communauté");    //case 3
+    plateau_jeu.emplace_back(case_courante0);
+    case_courante2 = new Terrain("\033[35mRue Lecourbe\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 4
+    plateau_jeu.emplace_back(case_courante2);
+
+    temp_rue.assign({case_courante1,case_courante2});   //première rue
+    liste_couleurs.emplace_back(temp_rue);
+
+    case_courante0 = new Impots("Impôt sur le revenu"); // case 5
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante0 = new Gare("Gare Montparnasse"); //case 6
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante1 = new Terrain("\033[37mRue de Vaugirard\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 7
+    plateau_jeu.emplace_back(case_courante1);
+
+    case_courante0 = new Chance("Chance"); //case 8
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante2 = new Terrain("\033[37mRue de Courcelles\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); // case 9
+    plateau_jeu.emplace_back(case_courante2);
+    case_courante3 = new Terrain("\033[37mAvenue de la République\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 10
+    plateau_jeu.emplace_back(case_courante3);
+
+    temp_rue.assign({case_courante1,case_courante2,case_courante3}); //seconde rue
+    liste_couleurs.emplace_back(temp_rue);
+
+    case_courante0 = new SimpleVisite("case prison",true); //case 11
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante1 = new Terrain("\033[95mBd de la Villette\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 12
+    plateau_jeu.emplace_back(case_courante1);
+
+    case_courante0 = new ServPublic("Compagnie d'électricité"); //case 13
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante2 = new Terrain("\033[95mAvenue de Neuilly\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 14
+    plateau_jeu.emplace_back(case_courante2);
+    case_courante3 = new Terrain("\033[95mRue de Paradis\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 15
+    plateau_jeu.emplace_back(case_courante3);
+
+    temp_rue.assign({case_courante1,case_courante2,case_courante3});
+    liste_couleurs.emplace_back(temp_rue);
+
+    case_courante0 = new Gare("Gare de Lyon"); //case 16
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante1 = new Terrain("\033[33mAvenue Mozart\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 17
+    plateau_jeu.emplace_back(case_courante1);
+
+    case_courante0 = new Communauté("Caisse de Communauté");    //case 18
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante2 = new Terrain("\033[33mBd Saint-Michel\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 19
+    plateau_jeu.emplace_back(case_courante2);
+    case_courante3 = new Terrain("\033[33mPlace Pigalle\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 20
+    plateau_jeu.emplace_back(case_courante3);
+
+    temp_rue.assign({case_courante1,case_courante2,case_courante3});
+    liste_couleurs.emplace_back(temp_rue);
+
+    case_courante0 = new SimpleVisite("Parc GRATUIT"); //case 21
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante1 = new Terrain("\033[31mAvenue Matignon\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 22
+    plateau_jeu.emplace_back(case_courante1);
+
+    case_courante0 = new Chance("Chance"); //case 23
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante2 = new Terrain("\033[31mBd Malesherbes\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 24
+    plateau_jeu.emplace_back(case_courante2);
+    case_courante3 = new Terrain("\033[31mAvenue Henri-Martin\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 25
+    plateau_jeu.emplace_back(case_courante3);
+
+    temp_rue.assign({case_courante1,case_courante2,case_courante3});
+    liste_couleurs.emplace_back(temp_rue);
+
+    case_courante0 = new Gare("Gare du Nord"); //case 26
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante1 = new Terrain("\033[93mFaubourg Saint-Honoré\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 27
+    plateau_jeu.emplace_back(case_courante1);
+    case_courante2 = new Terrain("\033[93mPlace de la Bourse\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 28
+    plateau_jeu.emplace_back(case_courante2);
+
+    case_courante0 = new ServPublic("Compagnie des Eaux"); //case 29
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante3 = new Terrain("\033[93mRue de la Fayette\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 30
+    plateau_jeu.emplace_back(case_courante3);
+
+    temp_rue.assign({case_courante1,case_courante2,case_courante3});
+    liste_couleurs.emplace_back(temp_rue);
+
+    case_courante0 = new AllerEnPrison("ALLEZ EN PRISON!"); //case 31
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante1 = new Terrain("\033[32mAvenue de Breteuil\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 32
+    plateau_jeu.emplace_back(case_courante1);
+    case_courante2 = new Terrain("\033[32mAvenue Foch\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 33
+    plateau_jeu.emplace_back(case_courante2);
+
+    case_courante0 = new Communauté("Caisse de Communauté");    //case 34
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante3 = new Terrain("\033[32mBd des Capucines\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 35
+    plateau_jeu.emplace_back(case_courante3);
+
+    temp_rue.assign({case_courante1,case_courante2,case_courante3});
+    liste_couleurs.emplace_back(temp_rue);
+
+    case_courante0 = new Gare("Gare Saint-Lazare"); //case 36
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante0 = new Chance("Chance"); //case 37
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante1 = new Terrain("\033[34mChamps-Élysées\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 38
+    plateau_jeu.emplace_back(case_courante1);
+
+    case_courante0 = new TaxeDeLuxe("Taxe de luxe"); //case 39
+    plateau_jeu.emplace_back(case_courante0);
+
+    case_courante2 = new Terrain("\033[34mRue de la Paix\033[0m", generatePrixAchat(), generateLoyer(generatePrixAchat())); //case 40
+    plateau_jeu.emplace_back(case_courante2);
+
+    temp_rue.assign({case_courante1,case_courante2});
+    liste_couleurs.emplace_back(temp_rue);
+
 }
 
 void Maitre::creation_joueurs(int nb_J)
@@ -157,7 +313,7 @@ void Maitre::enchere(Terrain &tile) {
     
     bool pass[nb_Joeurs];
     int pass_total = 0;
-    Joueur *Gagnant;
+    Joueur *Gagnant = nullptr;
     std::cout << "Les enchères commencent pour la case :" << tile.getNom() << std::endl;
 
     for(int i=0; i <this->nb_Joeurs; i++) pass[i] = 0;  //on initialise la variable à false - pour être sûr
@@ -313,7 +469,7 @@ void Maitre::verif_joueur() {
 }
 std::vector<Case*> Maitre::liste_case_constructibles()
 {
-    std::vector<Case*> vecteur_cases_constructibles ;
+    std::vector<Case*> vecteur_cases_constructibles;
     std::vector<Case*> combinedCases;
     Joueur * joeur_actif = &(*index_joueur_actif);
     std::vector<Couleur>::iterator iterator_couleur= liste_couleurs.begin();
