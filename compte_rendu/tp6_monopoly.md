@@ -45,7 +45,7 @@ Pour réaliser ce TP, commencez par créer un repository Git en suivant les cons
 
 <div style="position: relative; text-align: center; color: white;">
 
-![Plateau de Monopoly](img/Plateau.png)
+![Plateau de Monopoly](img/plateau.png)
 
 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px;">
 Plateau de Monopoly
@@ -138,7 +138,7 @@ Pour stocker les groupes de cartes, nous avons créé une classe `Couleurs`. Cet
 Nous obtenons alors une conception qui suit le diagramme de classe suivant :
 <div style="position: relative; text-align: center; color: white;">
 
-![Diagramme de classe](img/diagClasse)
+![Diagramme de classe](img/diagClasse.png)
 
 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px;">
 Diagramme de classe
@@ -190,9 +190,6 @@ Pour ce qui est de la classe `Couleur`, la conception a été plutôt laborieuse
 Nous avons donc modifié la conception pour que la classe `Couleur` soit plus cohérente dans le projet. Le Maître du Jeu possède le vecteur de couleurs, et chaque couleur possède son propre vecteur de cases.  
 L'objectif de cette classe est de permettre de savoir si la couleur est constructible ou non. À chaque achat, une mise à jour est effectuée pour vérifier le propriétaire des autres cases de la même couleur.  
 Un joueur peut également obtenir la liste des différentes cases constructibles.
-```
-
-Tu peux copier et coller ce texte dans ton fichier `.md`.
 
 #### Classe MJ
 
