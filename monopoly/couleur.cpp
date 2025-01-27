@@ -1,24 +1,43 @@
 #include "couleur.hpp"
 
 
-Couleur::Couleur(vector<Case*> rue){
+Couleur::Couleur(vector<Actif*> rue){
     _rue = rue ;
 }
 
-vector<Case*> Couleur::listeConstructible(Joueur* joueur){
+vector<Actif*> Couleur::listeConstructible(Joueur* joueur){
     if(joueur == _joueur)
     {
         return _rue;
     }
     else
     {
-        return vector<Case*>{nullptr};
+        return vector<Actif*>{nullptr};
     }
 }
 
 void Couleur::miseAJour(){
-    for(auto it=_rue.begin(); it!=_rue.end(); it++){
-        
+    if (_rue.empty()) {
+        cout << "Aucune case dans la rue." << endl;
+        return;
     }
+
+    // Obtenir le propriétaire de la première case
+    Joueur* premierProprietaire = _rue.front()->getProprio(); // Remplacez `proprietaire` par le champ réel
+
+    // Vérifier si tous les propriétaires sont les mêmes
+    bool tousIdentiques = true;
+    for (Actif* c : _rue) {
+        if (c->getProprio() != premierProprietaire) { // Comparaison avec le premier propriétaire
+            tousIdentiques = false;
+            break;
+        }
+    }
+
+    if (tousIdentiques) {
+        for (Actif* c : _rue) {
+            c->setConstructible(1);
+        }
+    } 
 }
 

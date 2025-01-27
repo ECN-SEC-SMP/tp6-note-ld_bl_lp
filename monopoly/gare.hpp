@@ -14,7 +14,7 @@ protected:
 public:
 
     Gare(string nom);
-    void achat(Joueur& joueur) override;
-    int tarif(Joueur &joueur);
+    void achat(Joueur* joueur) override;
+    int tarif(Joueur* joueur);
 
 };

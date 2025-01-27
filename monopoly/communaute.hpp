@@ -3,9 +3,9 @@
 
 #include "action.hpp"
 
-class Communauté : public Action {
+class communaute : public Action {
 public:
-    Communauté(const string& nom);
+    communaute(const string& nom);
     void activation(Joueur& joueur) override;
 };
 

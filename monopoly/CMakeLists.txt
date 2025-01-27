@@ -15,11 +15,16 @@ set(SOURCES
     case.cpp
     action.cpp
     chance.cpp
-    communauté.cpp
+    communaute.cpp
     taxe_de_luxe.cpp
     impots.cpp
     aller_en_prison.cpp
     simple_visite.cpp
+    actif.cpp
+    gare.cpp
+    servPublic.cpp
+    terrain.cpp
+    couleur.cpp
 
 )
 

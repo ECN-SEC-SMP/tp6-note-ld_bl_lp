@@ -10,7 +10,7 @@ class ServPublic : public Actif {
 public:
 
     ServPublic(string nom);
-    void achat(Joueur& joueur) override;
-    int tarif(Joueur &joueur, int de1, int de2);
+    void achat(Joueur* joueur) override;
+    int tarif(Joueur* joueur, int de1, int de2);
 
 };
